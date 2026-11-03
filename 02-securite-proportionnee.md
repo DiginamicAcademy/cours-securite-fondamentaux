@@ -1,3 +1,5 @@
+[← Chapitre précédent](02-Exemple%20de%20cours%20en%20multi-fichier.md) · [Sommaire](Readme.md) · [Chapitre suivant →](03-Slides.md)
+
 # Sécurité proportionnée — risque, coût et confort d'usage
 
 > On ne met pas le même verrou sur une cabane de jardin que sur un coffre-fort.
@@ -133,3 +135,7 @@ la journée.*
   généralisent ; celles qui coûtent du confort se réservent aux systèmes qui le
   méritent.
 - Arbitrer, c'est choisir quoi faire **et** quoi ne pas faire — et l'écrire.
+
+---
+
+[← Chapitre précédent](02-Exemple%20de%20cours%20en%20multi-fichier.md) · [Sommaire](Readme.md) · [Chapitre suivant →](03-Slides.md)
