@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img" aria-label="Le chapeau de risque : la menace rencontre une vulnérabilité, le risque se réalise en impact">
+  <defs>
+    <marker id="fleche" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3b5b8d"/>
+    </marker>
+  </defs>
+  <style>
+    .titre { font-family: DejaVu Sans, Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #1f2937; text-anchor: middle; }
+    .sous { font-family: DejaVu Sans, Arial, sans-serif; font-size: 15px; fill: #4b5563; text-anchor: middle; }
+    .lien { stroke: #3b5b8d; stroke-width: 2.5; fill: none; marker-end: url(#fleche); }
+  </style>
+
+  <!-- Menace -->
+  <rect x="40" y="30" width="280" height="90" rx="12" fill="#eef2f9" stroke="#3b5b8d" stroke-width="2"/>
+  <text class="titre" x="180" y="68">Menace</text>
+  <text class="sous" x="180" y="98">ce qui peut causer un dommage</text>
+
+  <!-- Vulnérabilité -->
+  <rect x="540" y="30" width="280" height="90" rx="12" fill="#eef2f9" stroke="#3b5b8d" stroke-width="2"/>
+  <text class="titre" x="680" y="68">Vulnérabilité</text>
+  <text class="sous" x="680" y="98">la faiblesse exploitable</text>
+
+  <!-- Risque -->
+  <rect x="290" y="180" width="280" height="90" rx="12" fill="#dbe6f5" stroke="#1f3f6b" stroke-width="2.5"/>
+  <text class="titre" x="430" y="218">Risque</text>
+  <text class="sous" x="430" y="248">probabilité × gravité</text>
+
+  <!-- Impact -->
+  <rect x="290" y="310" width="280" height="70" rx="12" fill="#fde8e8" stroke="#b34040" stroke-width="2.5"/>
+  <text class="titre" x="430" y="353">Impact</text>
+
+  <!-- Liens -->
+  <path class="lien" d="M 180 120 L 180 150 L 350 150 L 350 176"/>
+  <path class="lien" d="M 680 120 L 680 150 L 510 150 L 510 176"/>
+  <path class="lien" d="M 430 270 L 430 306"/>
+
+  <!-- Légende de lecture -->
+  <text class="sous" x="430" y="30">la menace rencontre la vulnérabilité</text>
+  <text class="sous" x="430" y="398">le risque se réalise : c'est l'impact</text>
+</svg>

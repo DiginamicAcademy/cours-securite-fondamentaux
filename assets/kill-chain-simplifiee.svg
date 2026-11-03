@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 220" width="960" height="220" role="img" aria-label="La kill chain simplifiée en cinq étapes : reconnaissance, intrusion, exploitation, persistance, exfiltration">
+  <defs>
+    <marker id="fleche" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3b5b8d"/>
+    </marker>
+  </defs>
+  <style>
+    .etape { font-family: DejaVu Sans, Arial, sans-serif; font-size: 19px; font-weight: bold; fill: #1f2937; text-anchor: middle; }
+    .sous { font-family: DejaVu Sans, Arial, sans-serif; font-size: 14px; fill: #4b5563; text-anchor: middle; }
+    .lien { stroke: #3b5b8d; stroke-width: 2.5; fill: none; marker-end: url(#fleche); }
+  </style>
+
+  <!-- Étape 1 -->
+  <rect x="5" y="55" width="170" height="100" rx="12" fill="#eef2f9" stroke="#3b5b8d" stroke-width="2"/>
+  <text class="etape" x="90" y="92">Reconnaissance</text>
+  <text class="sous" x="90" y="120">observer la cible</text>
+
+  <!-- Étape 2 -->
+  <rect x="200" y="55" width="170" height="100" rx="12" fill="#eef2f9" stroke="#3b5b8d" stroke-width="2"/>
+  <text class="etape" x="285" y="92">Intrusion</text>
+  <text class="sous" x="285" y="120">entrer dans le système</text>
+
+  <!-- Étape 3 -->
+  <rect x="395" y="55" width="170" height="100" rx="12" fill="#dbe6f5" stroke="#1f3f6b" stroke-width="2.5"/>
+  <text class="etape" x="480" y="92">Exploitation</text>
+  <text class="sous" x="480" y="120">agir, élever ses droits</text>
+
+  <!-- Étape 4 -->
+  <rect x="590" y="55" width="170" height="100" rx="12" fill="#eef2f9" stroke="#3b5b8d" stroke-width="2"/>
+  <text class="etape" x="675" y="92">Persistance</text>
+  <text class="sous" x="675" y="120">rester malgré les redémarrages</text>
+
+  <!-- Étape 5 -->
+  <rect x="785" y="55" width="170" height="100" rx="12" fill="#fde8e8" stroke="#b34040" stroke-width="2.5"/>
+  <text class="etape" x="870" y="92">Exfiltration</text>
+  <text class="sous" x="870" y="120">faire sortir les données</text>
+
+  <!-- Liens entre les étapes -->
+  <path class="lien" d="M 175 105 L 196 105"/>
+  <path class="lien" d="M 370 105 L 391 105"/>
+  <path class="lien" d="M 565 105 L 586 105"/>
+  <path class="lien" d="M 760 105 L 781 105"/>
+
+  <!-- Légende -->
+  <text class="sous" x="480" y="30">couper une seule étape fait échouer l'attaque</text>
+  <text class="sous" x="480" y="195">chaque étape est une occasion de défendre</text>
+</svg>

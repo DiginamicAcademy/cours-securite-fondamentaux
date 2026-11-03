@@ -1,5 +1,3 @@
-[Sommaire](Readme.md) · [Chapitre suivant →](02-securite-proportionnee.md)
-
 # Pourquoi sécuriser ? — Enjeux business et humains
 
 > Une fromagerie vend du Comté en ligne. Ses données clients valent-elles les mêmes
@@ -121,7 +119,3 @@ la journée.*
 - La sécurité est un **arbitrage** : on protège proportionnellement à la valeur
   des actifs et à la menace.
 - Avant tout outil : savoir **ce qu'on protège, pour qui, contre quoi**.
-
----
-
-[Sommaire](Readme.md) · [Chapitre suivant →](02-securite-proportionnee.md)
