@@ -7,7 +7,7 @@
 
 ## Contexte
 
-La fromagerie *Les Comtés du Jura* vend ses fromages en ligne. Un lundi matin,
+**DIGICHEESE** (la fromagerie du fil rouge) vend ses fromages en ligne. Un lundi matin,
 Sophie, responsable des commandes, ouvre un courriel qui semble venir de son
 fournisseur de cartons. Elle clique sur le lien, saisit ses identifiants sur une
 page qui ressemble à s'y méprendre à l'extranet de la fromagerie.

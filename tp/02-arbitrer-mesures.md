@@ -9,7 +9,7 @@
 ## Contexte
 
 Après l'incident raconté dans le chapitre précédent, la direction de la fromagerie
-*Les Comtés du Jura* décide de revoir sa sécurité. Le cabinet qui l'accompagne
+**DIGICHEESE** (la fromagerie du fil rouge) décide de revoir sa sécurité. Le cabinet qui l'accompagne
 refuse de vendre « tout le catalogue » : il pose d'abord une question — qu'est-ce
 qui mérite quoi ?
 
