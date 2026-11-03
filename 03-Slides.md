@@ -1,4 +1,4 @@
-[← Chapitre précédent](02-Exemple%20de%20cours%20en%20multi-fichier.md) · [Sommaire](Readme.md) · [Chapitre suivant →](04-Auteurs-et-contributeurs.md)
+[← Chapitre précédent](02-securite-proportionnee.md) · [Sommaire](Readme.md) · [Chapitre suivant →](04-Auteurs-et-contributeurs.md)
 
 # Faire les diapositives avec Marp
 
@@ -136,4 +136,4 @@ du projet, courte et bien faite :
 
 ---
 
-[← Chapitre précédent](02-Exemple%20de%20cours%20en%20multi-fichier.md) · [Sommaire](Readme.md) · [Chapitre suivant →](04-Auteurs-et-contributeurs.md)
+[← Chapitre précédent](02-securite-proportionnee.md) · [Sommaire](Readme.md) · [Chapitre suivant →](04-Auteurs-et-contributeurs.md)
