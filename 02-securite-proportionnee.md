@@ -1,4 +1,4 @@
-[← Chapitre précédent](02-Exemple%20de%20cours%20en%20multi-fichier.md) · [Sommaire](Readme.md) · [Chapitre suivant →](03-Slides.md)
+[← Chapitre précédent](01-pourquoi-securiser.md) · [Sommaire](Readme.md)
 
 # Sécurité proportionnée — risque, coût et confort d'usage
 
@@ -138,4 +138,4 @@ la journée.*
 
 ---
 
-[← Chapitre précédent](02-Exemple%20de%20cours%20en%20multi-fichier.md) · [Sommaire](Readme.md) · [Chapitre suivant →](03-Slides.md)
+[← Chapitre précédent](01-pourquoi-securiser.md) · [Sommaire](Readme.md)

@@ -1,4 +1,4 @@
-[Sommaire](Readme.md) · [Chapitre suivant →](02-Exemple%20de%20cours%20en%20multi-fichier.md)
+[Sommaire](Readme.md) · [Chapitre suivant →](02-securite-proportionnee.md)
 
 # Pourquoi sécuriser ? — Enjeux business et humains
 
@@ -124,4 +124,4 @@ la journée.*
 
 ---
 
-[Sommaire](Readme.md) · [Chapitre suivant →](02-Exemple%20de%20cours%20en%20multi-fichier.md)
+[Sommaire](Readme.md) · [Chapitre suivant →](02-securite-proportionnee.md)
