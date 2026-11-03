@@ -7,25 +7,63 @@
 
 # Les fondamentaux de la cybersécurité et de la sécurité informatique
 
-> Cours d'**autoformation** · **RNCP40573** Expert en informatique et systèmes d'information · spécialisation **4B Big Data & IA**
+> Cours d'**autoformation** · **RNCP40573** Expert en informatique et systèmes d'information · **brique transversale de sécurité**, adossée au bloc **BC03** (compétence C25)
 > 1 journée(s) · supports **rédigés par IA**, relus et validés.
 
 ---
 
 ## Pourquoi ce cours
 
-*À compléter — contexte et enjeux du cours.*
+On ne protège jamais tout : on protège **ce qui a de la valeur, à la mesure de
+ce qui le menace**. Avant la boîte à outils, ce cours donne les réflexes de
+départ — regarder ce qu'on protège, mesurer ce qu'un incident coûte réellement,
+et arbitrer les mesures de sécurité au lieu de les accumuler.
+
+Le fil rouge est **DIGICHEESE** (la fromagerie du fil rouge) : une fromagerie qui
+vend du Comté en ligne, et dont les données clients ne valent pas les mêmes
+mesures que les codes d'accès d'une banque. Chaque notion est appliquée à ce cas,
+puis comparée à d'autres systèmes.
+
+---
 
 ## À l'issue de ce cours
 
-*À compléter — objectifs en verbes d'action (jamais de niveaux Bloom).*
+Vous serez capable de :
+
+- **Décrire** les conséquences d'un incident de sécurité sur une organisation.
+- **Distinguer** les postes de coût d'un incident, au-delà de la seule réparation technique.
+- **Identifier** les victimes d'un incident, au-delà de l'entreprise elle-même.
+- **Expliquer** pourquoi la sécurité est un arbitrage et non une accumulation de mesures.
+- **Évaluer** la criticité d'un système à partir de trois critères : valeur des données, exposition, impact métier.
+- **Confronter** le coût d'une mesure de sécurité au risque qu'elle réduit.
+- **Arbitrer** entre plusieurs mesures possibles, et dire ce que vous acceptez de ne pas faire.
+- **Rédiger** un avis d'arbitrage court et argumenté.
+
+---
 
 ## Sommaire
 
+| # | Chapitre | Durée de lecture |
+| --- | --- | --- |
+| 01 | [Pourquoi sécuriser ? — Enjeux business et humains](01-pourquoi-securiser.md) | 45 min |
+| 02 | [Sécurité proportionnée — risque, coût et confort d'usage](02-securite-proportionnee.md) | 55 min |
 
+**Travaux pratiques** — chaque énoncé se fait juste après le chapitre
+correspondant, puis se corrige soi-même :
+
+| | Sujet | Durée |
+| --- | --- | --- |
+| 🟢 | [Analyser un incident](tp/01-analyser-incident.md) · [corrigé](tp/corrige/01-analyser-incident.md) | 20 min |
+| 🟡 | [Arbitrer des mesures de sécurité](tp/02-arbitrer-mesures.md) · [corrigé](tp/corrige/02-arbitrer-mesures.md) | 35 min |
 
 ---
 
 ## Aller plus loin
 
-*À compléter.*
+*Ces approfondissements sont facultatifs : ils ne sont jamais exigés pour
+terminer la journée.*
+
+- **ANSSI (Agence nationale de la sécurité des systèmes d'information)** : l'autorité française en matière de cybersécurité. Ses rapports d'activité et son « [Panorama de la cybermenace](https://cyber.gouv.fr/nous-connaitre/publications/panoramas-de-la-cybermenace/) » détaillent les tendances observées en France.
+- **DBIR ([Data Breach Investigations Report, Verizon](https://www.verizon.com/business/resources/reports/dbir/))** : une étude annuelle de milliers d'incidents réels, utile pour comprendre les motifs d'attaque dominants.
+- **CNIL ([Commission nationale de l'informatique et des libertés](https://www.cnil.fr/))** : le cadre et les sanctions liés aux données personnelles en France.
+- **EBIOS ([Expression des Besoins et Identification des Objectifs de sécurité](https://cyber.gouv.fr/securisation/analyse-des-risques/methode-ebios-rm/))**, dans sa version **RM (méthode de gestion des risques)** : la méthode française de l'ANSSI pour analyser les risques de bout en bout.
