@@ -1,3 +1,5 @@
+[← Chapitre précédent](05-modeles-de-securite.md) · [Sommaire](Readme.md)
+
 # Cadre juridique introductif — le RGPD comme contrainte technique
 
 > Une boutique en ligne conserve des adresses e-mail « au cas où », depuis des
@@ -168,3 +170,7 @@ la journée.*
   toujours, **prévenir** les personnes quand le risque est élevé.
 - **Accessibilité PSH** et **éco-conception** se décident à la conception — au
   moment du schéma de base et des maquettes.
+
+---
+
+[← Chapitre précédent](05-modeles-de-securite.md) · [Sommaire](Readme.md)
