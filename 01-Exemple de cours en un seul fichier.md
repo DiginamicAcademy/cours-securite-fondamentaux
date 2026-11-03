@@ -1,4 +1,4 @@
-[← Chapitre précédent](00-Creer-un-depot-de-cours.md) · [Sommaire](Readme.md) · [Chapitre suivant →](01-pourquoi-securiser.md)
+[Sommaire](Readme.md) · [Chapitre suivant →](01-pourquoi-securiser.md)
 
 # Template de cours : exemple de cours mono fichier
 
@@ -143,4 +143,4 @@ chapitres devient préférable : un fichier par chapitre, recollés automatiquem
 
 ---
 
-[← Chapitre précédent](00-Creer-un-depot-de-cours.md) · [Sommaire](Readme.md) · [Chapitre suivant →](01-pourquoi-securiser.md)
+[Sommaire](Readme.md) · [Chapitre suivant →](01-pourquoi-securiser.md)
