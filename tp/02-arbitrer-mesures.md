@@ -1,6 +1,7 @@
 # Exercice — Arbitrer des mesures de sécurité
 
-> 🟡 **Intermédiaire** · **Durée :** 35 min · **Lien :** chapitre [Sécurité proportionnée](../02-securite-proportionnee.md)
+> **Nature :** TD (quatre mini-exercices en séquence découverte) · **Durée :** 30 min · **Notion :** évaluer la criticité et arbitrer les mesures de sécurité (criticité, coût des mesures, risque résiduel, avis d'arbitrage)
+> 🟡 **Intermédiaire** · **Durée :** 30 min · **Lien :** chapitre [Sécurité proportionnée](../02-securite-proportionnee.md)
 > **Objectif :** évaluer la criticité de quatre systèmes, choisir les mesures qui
 > les protègent — et dire ce qu'on accepte de ne pas faire.
 

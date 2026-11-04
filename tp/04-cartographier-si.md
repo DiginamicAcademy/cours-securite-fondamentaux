@@ -1,6 +1,7 @@
 # Exercice — Cartographier les zones de confiance d'une plateforme data
 
-> 🔵 **Avancé** · **Durée :** 45 min · **Lien :** chapitre [Le paysage de la cybersécurité](../04-paysage-cyber.md)
+> **Nature :** élément intégrable dans l'exercice d'intégration de fin de journée ([INTEGRATION-J1.md](INTEGRATION-J1.md)) — utilisable aussi en TD autonome · **Durée :** 30 min · **Notion :** cartographier les zones de confiance, les flux qui les traversent et les points de contrôle
+> 🔵 **Avancé** · **Durée :** 30 min · **Lien :** chapitres [Le paysage de la cybersécurité](../04-paysage-cyber.md) et [Modèles de défense](../05-modeles-de-securite.md)
 > **Objectif :** cartographier les zones de confiance d'une plateforme data, les
 > flux qui les traversent, et y placer les étapes d'une attaque.
 

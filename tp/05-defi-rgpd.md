@@ -1,6 +1,7 @@
 # Défi — Identifier les obligations RGPD sur un cas type
 
-> 🔴 **Défi** · **Durée :** libre · **Facultatif** · **Lien :** chapitre [Cadre juridique introductif](../06-cadre-juridique-intro.md)
+> **Nature :** exercice (défi facultatif) · **Durée :** 30 min · **Notion :** identifier les obligations RGPD d'un projet et les traduire en contraintes concrètes
+> 🔴 **Défi** · **Durée :** 30 min · **Facultatif** · **Lien :** chapitre [Cadre juridique introductif](../06-cadre-juridique-intro.md)
 > **Objectif :** identifier les obligations RGPD (Règlement général sur la
 > protection des données) qui s'appliquent à un projet concret, et les traduire
 > en contraintes techniques.

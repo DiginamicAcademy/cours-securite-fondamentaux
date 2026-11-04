@@ -1,6 +1,7 @@
 # Exercice — Analyser un incident
 
-> 🟢 **Débutant** · **Durée :** 20 min · **Lien :** chapitre [Pourquoi sécuriser ?](../01-pourquoi-securiser.md)
+> **Nature :** exercice · **Durée :** 15 min · **Notion :** analyser et classifier un incident de sécurité (actifs touchés, piliers CID, postes de coût)
+> 🟢 **Débutant** · **Durée :** 15 min · **Lien :** chapitre [Pourquoi sécuriser ?](../01-pourquoi-securiser.md)
 > **Objectif :** classifier un incident de sécurité : actifs touchés, piliers CID, impact.
 
 ---

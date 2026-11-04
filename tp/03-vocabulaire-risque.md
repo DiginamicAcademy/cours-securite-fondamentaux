@@ -1,6 +1,7 @@
 # Exercice — Construire une matrice menace → vulnérabilité → risque
 
-> 🟡 **Intermédiaire** · **Durée :** 35 min · **Lien :** chapitre [CID et vocabulaire du risque](../03-cid-et-vocabulaire.md)
+> **Nature :** exercice · **Durée :** 25 min · **Notion :** construire la chaîne menace → vulnérabilité → risque → impact, et qualifier les risques d'un système
+> 🟡 **Intermédiaire** · **Durée :** 25 min · **Lien :** chapitre [CID et vocabulaire du risque](../03-cid-et-vocabulaire.md)
 > **Objectif :** construire une matrice menace → vulnérabilité → risque → impact, et qualifier les risques d'un système.
 
 ---
