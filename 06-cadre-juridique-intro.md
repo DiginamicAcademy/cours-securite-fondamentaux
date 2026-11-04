@@ -1,13 +1,16 @@
 [← Chapitre précédent](05-modeles-de-securite.md) · [Sommaire](Readme.md)
 
-# Cadre juridique introductif — le RGPD comme contrainte technique
+# Cadre juridique introductif — le RGPD (Règlement général sur la protection des données) comme contrainte technique
 
 > Une boutique en ligne conserve des adresses e-mail « au cas où », depuis des
-> années, sans savoir pourquoi — et reçoit un courrier de la CNIL. La loi n'est
-> pas un frein à contourner : c'est un cadre qui se traduit en **contraintes
-> techniques**, aussi concrètes qu'une règle de pare-feu.
+> années, sans savoir pourquoi — et reçoit un courrier de la CNIL (Commission
+> nationale de l'informatique et des libertés). La loi n'est pas un frein à
+> contourner : c'est un cadre qui se traduit en **contraintes techniques**, aussi
+> concrètes qu'une règle de pare-feu.
 
-**Durée de lecture :** 55 min · **Prérequis :** [Modèles de défense](05-modeles-de-securite.md)
+**Durée :** ≈ 25 min (lecture ≈ 12 min + atelier 8 min + réflexion) · **Prérequis :** [Modèles de défense](05-modeles-de-securite.md)
+
+<!-- MODE TD : 🟢 découverte (accroche + §I, le RGPD en bref) → ✅ correction (atelier « table commandes », §II) → 📘 cours (§II la violation, §III les transversales) → 🔵 application (TP 05 — Identifier les obligations RGPD) -->
 
 ---
 
@@ -24,17 +27,18 @@
 
 ## I. Le RGPD en 5 minutes
 
-Le **RGPD (Règlement général sur la protection des données)** est le texte
-européen qui encadre le traitement des données personnelles. Il s'applique dès
-qu'on traite des données relatives à des personnes identifiées ou
-identifiables — quel que soit le pays où se trouve le serveur.
+Le **RGPD** est le texte européen qui encadre le traitement des données
+personnelles. Il s'applique dès qu'on traite des données relatives à des
+personnes identifiées ou identifiables — quel que soit le pays où se trouve le
+serveur.
 
 ### Qu'est-ce qu'une donnée personnelle ?
 
 Tout ce qui identifie une personne, directement ou indirectement : nom, adresse
-e-mail, numéro de téléphone, mais aussi identifiant de session, adresse IP,
-historique d'achats, géolocalisation. Un identifiant technique « anonyme » qui
-permet de retrouver une personne est une donnée personnelle.
+e-mail, numéro de téléphone, mais aussi identifiant de session, adresse IP
+(Internet Protocol, le protocole d'adressage d'Internet), historique d'achats,
+géolocalisation. Un identifiant technique « anonyme » qui permet de retrouver
+une personne est une donnée personnelle.
 
 ### Les principes qui dérangent (et qui structurent tout)
 
@@ -78,10 +82,9 @@ clients en est une ; un export oublié sur un serveur public aussi.
 
 La procédure tient en trois gestes :
 
-1. **Notifier** l'autorité de contrôle — la **CNIL (Commission nationale de
-   l'informatique et des libertés)** en France — dans les **72 heures** après en
-   avoir pris connaissance, sauf si la violation ne fait pas courir de risque aux
-   personnes.
+1. **Notifier** l'autorité de contrôle — la **CNIL** en France — dans les **72
+   heures** après en avoir pris connaissance, sauf si la violation ne fait pas
+   courir de risque aux personnes.
 2. **Documenter** l'incident : ce qui s'est passé, quelles données sont
    concernées, quelles mesures ont été prises. Même quand on ne notifie pas, on
    écrit.
@@ -106,6 +109,9 @@ met trois semaines à comprendre ce qui s'est passé, puis notifie, est hors dé
 ---
 
 ## III. Les transversales
+
+> ⚠️ **À ARBITRER** — *Section hors sujet central (la sécurité comme contrainte
+> technique) : suppression envisageable si le temps manque.*
 
 Le RGPD n'est pas le seul cadre à croiser. Deux autres préoccupations
 reviennent dans les cahiers des charges, et se traitent au même moment : à la
@@ -142,8 +148,7 @@ les obligations d'achat public, et toujours dans la durée de vie du service.
 
 ## IV. Aller plus loin
 
-*Ces approfondissements sont facultatifs : ils ne sont jamais exigés pour terminer
-la journée.*
+> ⏭️ **Facultatif — pas exigé pour finir la journée.**
 
 - **Le rôle de la CNIL** : elle contrôle, elle sanctionne, mais elle accompagne
   aussi — ses fiches pratiques et ses référentiels détaillent les bonnes

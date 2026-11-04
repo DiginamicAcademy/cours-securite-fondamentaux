@@ -7,7 +7,9 @@
 > mesures. Avant d'ouvrir la boîte à outils, apprenez à **mesurer ce que vous
 > protégez** — et le prix de chaque verrou.
 
-**Durée de lecture :** 55 min · **Prérequis :** [Pourquoi sécuriser ?](01-pourquoi-securiser.md)
+**Durée :** ≈ 20 min (lecture ≈ 10 min + atelier 8 min + réflexion) · **Prérequis :** [Pourquoi sécuriser ?](01-pourquoi-securiser.md)
+
+<!-- MODE TD : 🟢 découverte (accroche + §I, les quatre systèmes) → ✅ correction (atelier de cotation, §I) → 📘 cours (§II le coût des mesures, §III l'avis d'arbitrage) → 🔵 application (TP 02 — Arbitrer des mesures de sécurité) -->
 
 ---
 
@@ -111,17 +113,16 @@ différence entre subir un incident et l'avoir anticipé.
 
 ## IV. Aller plus loin
 
-*Ces approfondissements sont facultatifs : ils ne sont jamais exigés pour terminer
-la journée.*
+> ⏭️ **Facultatif — pas exigé pour finir la journée.**
 
 - **EBIOS** (Expression des Besoins et Identification des Objectifs de
   sécurité), dans sa version **RM** (méthode de gestion des risques) : la méthode française de l'**ANSSI**
   (Agence nationale de la sécurité des systèmes d'information) pour analyser les
   risques de bout en bout. Ce chapitre en emprunte l'esprit : partir des actifs et
   des scénarios, pas de la liste d'outils.
-- **Les matrices de risque** des grands cadres internationaux de gestion des
-  risques : même logique, vocabulaires différents. L'important est la démarche, pas
-  la case cochée.
+- ⚠️ **À ARBITRER** — **Les matrices de risque** des grands cadres internationaux :
+  même logique que l'item EBIOS, vocabulaires différents. *Redondant : suppression
+  envisageable.*
 
 ---
 

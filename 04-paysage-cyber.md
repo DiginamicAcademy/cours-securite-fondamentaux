@@ -7,7 +7,9 @@
 > très différentes. Avant de se protéger, il faut savoir **qui l'on cherche à
 > tenir éloigné** — et à quelle vitesse le jeu se joue.
 
-**Durée de lecture :** 60 min · **Prérequis :** [Vocabulaire du risque](03-cid-et-vocabulaire.md)
+**Durée :** ≈ 20 min (lecture ≈ 12 min + atelier 5 min + réflexion) · **Prérequis :** [Vocabulaire du risque](03-cid-et-vocabulaire.md)
+
+<!-- MODE TD : 🟢 découverte (accroche + §I, les acteurs) → ✅ correction (atelier d'attribution, §I) → 📘 cours (§II la kill chain, §III la course patch / exploit) → 🔵 application (reconstitution de kill chain — pas de TP dédié pour ce chapitre) -->
 
 ---
 
@@ -115,10 +117,11 @@ D'où trois réflexes :
 - **La fenêtre d'exposition se mesure.** Entre la publication d'un correctif et
   son application, le système est exposé : cette durée est un indicateur de
   sécurité à part entière.
-- **L'IA accélère les deux camps.** Elle aide à générer des exploits, à tester
-  des variantes et à automatiser les scans ; elle aide aussi à trier les alertes,
-  à détecter les anomalies et à rédiger les correctifs. L'avantage reste au camp
-  qui exécute le plus vite.
+- ⚠️ **À ARBITRER** — **L'IA (intelligence artificielle) accélère les deux
+  camps.** Elle aide à générer des exploits, à tester des variantes et à
+  automatiser les scans ; elle aide aussi à trier les alertes, à détecter les
+  anomalies et à rédiger les correctifs. L'avantage reste au camp qui exécute le
+  plus vite. *Digression dispensable : suppression envisageable.*
 
 > [!DANGER]
 > « Nous n'avons rien d'intéressant à voler » n'est pas une défense. Les
@@ -129,20 +132,19 @@ D'où trois réflexes :
 
 ## IV. Aller plus loin
 
-*Ces approfondissements sont facultatifs : ils ne sont jamais exigés pour terminer
-la journée.*
+> ⏭️ **Facultatif — pas exigé pour finir la journée.**
 
 - **MITRE ATT&CK** — la base de référence des tactiques et techniques adverses.
   Le sigle se décompose en ATT (Adversarial Tactics, Techniques) et CK (Common
   Knowledge) ; il est maintenu par MITRE (organisme de recherche américain à but
   non lucratif). On y décrit les attaques par **comportements observables**, ce
   qui permet de comparer un incident à des méthodes déjà répertoriées.
-- **ANSSI (Agence nationale de la sécurité des systèmes d'information)** — son
-  « Panorama de la cybermenace » décrit chaque année les acteurs actifs en France
-  et leurs méthodes.
-- **DBIR (Data Breach Investigations Report, Verizon)** — une étude annuelle de
-  milliers d'incidents réels, utile pour vérifier si les motifs d'attaque que
-  vous redoutez sont ceux qui dominent réellement.
+- **ANSSI (Agence nationale de la sécurité des systèmes d'information)** et
+  **DBIR (Data Breach Investigations Report, Verizon)** — le « Panorama de la
+  cybermenace » de la première décrit chaque année les acteurs actifs en France ;
+  le second sert à vérifier si les motifs d'attaque que vous redoutez sont ceux
+  qui dominent réellement. Ressources déjà citées au
+  [chapitre 1](01-pourquoi-securiser.md).
 
 ---
 

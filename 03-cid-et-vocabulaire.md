@@ -1,13 +1,15 @@
 [← Chapitre précédent](02-securite-proportionnee.md) · [Sommaire](Readme.md) · [Chapitre suivant →](04-paysage-cyber.md)
 
-# CID et vocabulaire du risque — les mots pour parler du risque
+# CID (Confidentialité, Intégrité, Disponibilité) et vocabulaire du risque — les mots pour parler du risque
 
 > Un caissier de supermarché peut voler dans la caisse, modifier le prix d'un
 > article, ou bloquer la caisse pendant une heure. Trois gestes, trois problèmes,
 > trois mesures différentes. Pour en parler sans se comprendre de travers, il faut
 > d'abord s'accorder sur les mots.
 
-**Durée de lecture :** 60 min · **Prérequis :** [Sécurité proportionnée](02-securite-proportionnee.md)
+**Durée :** ≈ 20 min (lecture ≈ 12 min + atelier 5 min + réflexion et lecture de code) · **Prérequis :** [Sécurité proportionnée](02-securite-proportionnee.md)
+
+<!-- MODE TD : 🟢 découverte (accroche + §I, le caissier) → ✅ correction (atelier rançongiciel, §I) → 📘 cours (§II la chaîne du risque, §III la surface d'attaque) → 🔵 application (TP 03 — Matrice menace → vulnérabilité → risque) -->
 
 ---
 
@@ -114,8 +116,9 @@ commence dès qu'un élément est joignable, visible, ou devinable.
 
 Quatre familles à passer en revue :
 
-1. **Les points d'entrée techniques** — API ouvertes, ports réseau, pages de
-   connexion, fichiers téléchargeables, interfaces d'administration.
+1. **Les points d'entrée techniques** — API (Application Programming Interface,
+   interface de programmation) ouvertes, ports réseau, pages de connexion,
+   fichiers téléchargeables, interfaces d'administration.
 2. **Les données exposées** — messages d'erreur trop bavards, sauvegardes
    accessibles, fichiers de configuration, métadonnées.
 3. **Les identités** — comptes oubliés, mots de passe par défaut, comptes de
@@ -131,8 +134,9 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-# Surface d'attaque : cette route est joignable par quiconque connaît l'URL.
-# Elle renvoie toutes les commandes, adresses de livraison comprises.
+# Surface d'attaque : cette route est joignable par quiconque connaît son URL
+# (Uniform Resource Locator, l'adresse du service). Elle renvoie toutes les
+# commandes, adresses de livraison comprises.
 @app.get("/commandes")
 def lister_commandes():
     return base.all("SELECT * FROM commandes")
@@ -149,6 +153,9 @@ base:
   mot_de_passe: mot-de-passe-en-clair
 ```
 
+> ⚠️ **À ARBITRER** — *Second extrait qui illustre le même point que le précédent :
+> suppression envisageable.*
+
 Cartographier sa surface d'attaque, c'est donc lister trois choses : ce qui est
 **joignable**, ce qui est **visible**, et ce qui **permet d'aller plus loin** (un
 compte, une clé, une donnée qui en révèle une autre). C'est le sujet de
@@ -158,21 +165,20 @@ l'exercice de ce bloc.
 
 ## IV. Aller plus loin
 
-*Ces approfondissements sont facultatifs : ils ne sont jamais exigés pour terminer
-la journée.*
+> ⏭️ **Facultatif — pas exigé pour finir la journée.**
 
 - **RGPD (Règlement général sur la protection des données)** : le texte européen
   qui encadre le traitement des données personnelles. Il impose son propre
   vocabulaire — donnée personnelle, responsable de traitement, violation de
   données — que le [dernier chapitre de la journée](06-cadre-juridique-intro.md)
   détaillera.
-- **CNIL (Commission nationale de l'informatique et des libertés)** : l'autorité
-  française de contrôle. Ses fiches pratiques reprennent le vocabulaire du risque
-  sous l'angle juridique.
-- **ANSSI (Agence nationale de la sécurité des systèmes d'information)** : ses
-  guides publics emploient les mêmes termes (actif, menace, vulnérabilité,
-  impact) dans la méthode française d'analyse de risque EBIOS (Expression des
-  Besoins et Identification des Objectifs de sécurité).
+- **CNIL (Commission nationale de l'informatique et des libertés)** et
+  **ANSSI (Agence nationale de la sécurité des systèmes d'information)** : les
+  fiches pratiques de la première reprennent ce vocabulaire sous l'angle
+  juridique, les guides publics de la seconde sous l'angle méthodologique —
+  méthode EBIOS (Expression des Besoins et Identification des Objectifs de
+  sécurité). Mêmes ressources qu'au [chapitre 1](01-pourquoi-securiser.md), vues
+  sous un autre angle.
 
 ---
 

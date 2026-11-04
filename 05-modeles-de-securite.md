@@ -7,7 +7,9 @@
 > c'est leur **empilement** qui le protège, et la façon dont on accorde (ou non)
 > sa confiance.
 
-**Durée de lecture :** 50 min · **Prérequis :** [Le paysage de la cybersécurité](04-paysage-cyber.md)
+**Durée :** ≈ 20 min (lecture ≈ 12 min + atelier 5 min + réflexion et lecture de code) · **Prérequis :** [Le paysage de la cybersécurité](04-paysage-cyber.md)
+
+<!-- MODE TD : 🟢 découverte (accroche + §I, le château fort) → ✅ correction (atelier des couches, §I) → 📘 cours (§II Zero Trust, §III le moindre privilège, §IV la maturité) → 🔵 application (TP 04 — Cartographier les zones de confiance) -->
 
 ---
 
@@ -16,7 +18,9 @@
 À l'issue de ce chapitre, vous serez capable de :
 
 - **Décomposer** la défense d'une application en couches indépendantes.
-- **Appliquer** le principe Zero Trust (« ne jamais faire confiance, toujours vérifier ») à une architecture cloud ou API.
+- **Appliquer** le principe Zero Trust (« ne jamais faire confiance, toujours
+  vérifier ») à une architecture cloud ou API (Application Programming Interface,
+  interface de programmation).
 - **Réduire** les privilèges de chaque acteur au strict nécessaire.
 - **Situer** la maturité de sécurité d'une organisation avec un cadre de référence.
 
@@ -96,7 +100,8 @@ Le **moindre privilège** (least privilege) est le pendant opérationnel de Zero
 Trust : chaque acteur — personne, application, tâche planifiée — ne dispose que
 du **strict nécessaire**, et rien de plus.
 
-Côté base de données, cela se traduit directement dans les droits accordés :
+Côté base de données (SQL, Structured Query Language), cela se traduit
+directement dans les droits accordés :
 
 ```sql
 -- Un compte d'application n'a pas besoin d'être administrateur de la base :
@@ -119,23 +124,34 @@ accès compromis mène loin, et l'**impact** quand cela arrive.
 
 ---
 
-## IV. Aller plus loin
+## IV. Situer sa maturité de sécurité
 
-*Ces approfondissements sont facultatifs : ils ne sont jamais exigés pour terminer
-la journée.*
+Une fois les couches posées, reste à savoir où l'on en est. Un **cadre de
+maturité** donne une échelle commune pour se situer, comparer et progresser. Le
+plus utilisé est le **NIST (National Institute of Standards and Technology) CSF
+(Cybersecurity Framework)**, qui organise la sécurité en cinq fonctions :
+**identifier, protéger, détecter, répondre, restaurer**.
 
-- **NIST (National Institute of Standards and Technology) CSF (Cybersecurity
-  Framework)** : un cadre de référence qui organise la sécurité en fonctions —
-  identifier, protéger, détecter, répondre, restaurer. Il sert moins à « être
-  conforme » qu'à **situer sa maturité** : quelle fonction est assurée, laquelle
-  ne l'est pas encore.
-- **Les modèles de maturité** en général : ils donnent une échelle commune pour
-  comparer deux organisations ou suivre sa propre progression dans le temps. Le
-  niveau visé dépend de la criticité du système — on retrouve la logique de
-  proportionnalité du [chapitre sur la sécurité proportionnée](02-securite-proportionnee.md).
-- **L'IAM (Identity and Access Management, gestion des identités et des accès)**
- : la brique technique qui rend le moindre privilège applicable à grande
-  échelle — provisionnement, revue des droits, suppression des comptes.
+L'usage en est simple : pour chaque fonction, dire ce qui est assuré, ce qui ne
+l'est pas encore, et à quel niveau. On obtient une photographie honnête plutôt
+qu'une liste de vœux. Et le niveau visé n'est pas le même pour tout le monde :
+il dépend de la criticité du système — on retrouve la logique de
+[sécurité proportionnée](02-securite-proportionnee.md).
+
+---
+
+## V. Aller plus loin
+
+> ⏭️ **Facultatif — pas exigé pour finir la journée.**
+
+- **NIST CSF** : le cadre détaillé, ses niveaux de maturité et ses critères
+  d'évaluation — pour transformer la photographie de la section IV en plan
+  d'action.
+- ⚠️ **À ARBITRER** — **Les modèles de maturité** en général : même logique que
+  le NIST CSF. *Redondant avec la section IV : suppression envisageable.*
+- **L'IAM (Identity and Access Management, gestion des identités et des accès)** :
+  la brique technique qui rend le moindre privilège applicable à grande échelle —
+  provisionnement, revue des droits, suppression des comptes.
 
 ---
 
@@ -151,6 +167,8 @@ la journée.*
   accès.
 - La **détection** est une couche à part entière : sans elle, une défense
   contournée reste invisible.
+- La **maturité** se situe avec un cadre de référence (NIST CSF) : cinq
+  fonctions, un état par fonction.
 
 ---
 

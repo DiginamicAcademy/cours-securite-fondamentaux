@@ -6,7 +6,9 @@
 > mesures que les codes d'accès d'une banque ? Avant d'ouvrir la boîte à outils,
 > on apprend à **regarder ce qu'on protège**, et pourquoi.
 
-**Durée de lecture :** 45 min · **Prérequis :** aucun
+**Durée :** ≈ 15 min (lecture ≈ 8 min + atelier 5 min + réflexion) · **Prérequis :** aucun
+
+<!-- MODE TD : 🟢 découverte (accroche + §I, le cas hôpital) → ✅ correction (atelier « postes de coût », §I) → 📘 cours (§II les victimes, §III arbitrer) → 🔵 application (TP 01 — Analyser un incident) -->
 
 ---
 
@@ -29,11 +31,10 @@ d'information sont hors service : les urgences sont détournées vers d'autres
 du papier pendant des semaines. Ce n'est pas une histoire de geeks — c'est une
 histoire de lits, de personnes, de soins annulés.
 
-L'année précédente, un autre établissement français avait subi le même type
-d'attaque : plusieurs mois de remise en état, une rançon colossale réclamée, et
-des milliers de patients redirigés. Les cas ne manquent pas, et ils ne concernent
-pas que les hôpitaux : une **TPE** (très petite entreprise) peut être mise à genoux
-par une attaque partie d'un simple courriel piégé.
+L'année précédente, un autre établissement français subissait la même attaque :
+mois de remise en état, rançon réclamée, milliers de patients redirigés. Et ça ne
+concerne pas que les hôpitaux : une **TPE** (très petite entreprise) peut être
+mise à genoux par une attaque partie d'un simple courriel piégé.
 
 ### Les postes de coût
 
@@ -100,8 +101,7 @@ pour qui, contre quoi**.
 
 ## IV. Aller plus loin
 
-*Ces approfondissements sont facultatifs : ils ne sont jamais exigés pour terminer
-la journée.*
+> ⏭️ **Facultatif — pas exigé pour finir la journée.**
 
 - **ANSSI** (Agence nationale de la sécurité des systèmes d'information) : l'autorité
   française en matière de cybersécurité. Ses rapports d'activité et son « Panorama
