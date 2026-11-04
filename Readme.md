@@ -47,6 +47,10 @@ Vous serez capable de :
 | --- | --- | --- |
 | 01 | [Pourquoi sécuriser ? — Enjeux business et humains](01-pourquoi-securiser.md) | 45 min |
 | 02 | [Sécurité proportionnée — risque, coût et confort d'usage](02-securite-proportionnee.md) | 55 min |
+| 03 | [CID et vocabulaire du risque — les mots pour parler du risque](03-cid-et-vocabulaire.md) | 60 min |
+| 04 | [Le paysage de la cybersécurité — qui attaque, comment, et à quelle vitesse](04-paysage-cyber.md) | 60 min |
+| 05 | [Modèles de défense — la sécurité en couches](05-modeles-de-securite.md) | 50 min |
+| 06 | [Cadre juridique introductif — le RGPD comme contrainte technique](06-cadre-juridique-intro.md) | 55 min |
 
 **Travaux pratiques** — chaque énoncé se fait juste après le chapitre
 correspondant, puis se corrige soi-même :
@@ -55,6 +59,9 @@ correspondant, puis se corrige soi-même :
 | --- | --- | --- |
 | 🟢 | [Analyser un incident](tp/01-analyser-incident.md) · [corrigé](tp/corrige/01-analyser-incident.md) | 20 min |
 | 🟡 | [Arbitrer des mesures de sécurité](tp/02-arbitrer-mesures.md) · [corrigé](tp/corrige/02-arbitrer-mesures.md) | 35 min |
+| 🟡 | [Construire une matrice menace → vulnérabilité → risque](tp/03-vocabulaire-risque.md) · [corrigé](tp/corrige/03-vocabulaire-risque.md) | 35 min |
+| 🔵 | [Cartographier les zones de confiance d'une plateforme data](tp/04-cartographier-si.md) · [corrigé](tp/corrige/04-cartographier-si.md) | 45 min |
+| 🔴 | [Identifier les obligations RGPD sur un cas type](tp/05-defi-rgpd.md) · [corrigé](tp/corrige/05-defi-rgpd.md) | libre |
 
 ---
 
