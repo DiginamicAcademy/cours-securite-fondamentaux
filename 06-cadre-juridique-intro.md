@@ -1,4 +1,4 @@
-[← Chapitre précédent](05-modeles-de-securite.md) · [Sommaire](Readme.md)
+[← Chapitre précédent](05-modeles-de-securite.md) · [Sommaire](Readme.md) · [Chapitre suivant →](A-Glossaire-et-ressources.md)
 
 # Cadre juridique introductif — le RGPD (Règlement général sur la protection des données) comme contrainte technique
 
@@ -178,4 +178,4 @@ les obligations d'achat public, et toujours dans la durée de vie du service.
 
 ---
 
-[← Chapitre précédent](05-modeles-de-securite.md) · [Sommaire](Readme.md)
+[← Chapitre précédent](05-modeles-de-securite.md) · [Sommaire](Readme.md) · [Chapitre suivant →](A-Glossaire-et-ressources.md)

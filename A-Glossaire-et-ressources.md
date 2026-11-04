@@ -1,3 +1,5 @@
+[← Chapitre précédent](06-cadre-juridique-intro.md) · [Sommaire](Readme.md)
+
 # Glossaire et ressources
 
 > **Nature :** annexe de référence · **Usage :** tout au cours
@@ -109,3 +111,7 @@ journée.
 ## Dans ce cours
 
 - Les exercices, le TD et l'exercice d'intégration de fin de journée : le dossier `tp/`, avec leurs corrigés dans `tp/corrige/`.
+
+---
+
+[← Chapitre précédent](06-cadre-juridique-intro.md) · [Sommaire](Readme.md)
