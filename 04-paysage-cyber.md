@@ -108,13 +108,18 @@ CVE-2021-44228 dans la nomenclature CVE (Common Vulnerabilities and Exposures) 
 exploitée dans le monde entier quelques heures après sa publication, alors que
 les correctifs mettaient des semaines à se déployer.
 
-D'où deux réflexes :
+D'où trois réflexes :
 
 - **Le temps de réaction compte plus que la perfection.** Un correctif appliqué
   en quelques heures vaut mieux qu'une protection idéale jamais déployée.
 - **La fenêtre d'exposition se mesure.** Entre la publication d'un correctif et
   son application, le système est exposé : cette durée est un indicateur de
   sécurité à part entière.
+- **L'IA (intelligence artificielle) accélère les deux
+  camps.** Elle aide à générer des exploits, à tester des variantes et à
+  automatiser les scans ; elle aide aussi à trier les alertes, à détecter les
+  anomalies et à rédiger les correctifs. L'avantage reste au camp qui exécute le
+  plus vite.
 
 > [!DANGER]
 > « Nous n'avons rien d'intéressant à voler » n'est pas une défense. Les

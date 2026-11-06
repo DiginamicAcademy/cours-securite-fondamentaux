@@ -118,6 +118,8 @@ différence entre subir un incident et l'avoir anticipé.
   (Agence nationale de la sécurité des systèmes d'information) pour analyser les
   risques de bout en bout. Ce chapitre en emprunte l'esprit : partir des actifs et
   des scénarios, pas de la liste d'outils.
+- **Les matrices de risque** des grands cadres internationaux :
+  même logique que l'item EBIOS, vocabulaires différents.
 
 ---
 
