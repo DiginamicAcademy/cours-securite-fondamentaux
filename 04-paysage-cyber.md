@@ -9,8 +9,6 @@
 
 **Durée :** ≈ 20 min (lecture ≈ 12 min + atelier 5 min + réflexion) · **Prérequis :** [Vocabulaire du risque](03-cid-et-vocabulaire.md)
 
-<!-- MODE TD : 🟢 découverte (accroche + §I, les acteurs) → ✅ correction (atelier d'attribution, §I) → 📘 cours (§II la kill chain, §III la course patch / exploit) → 🔵 application (reconstitution de kill chain — pas de TP dédié pour ce chapitre) -->
-
 ---
 
 ## Objectifs

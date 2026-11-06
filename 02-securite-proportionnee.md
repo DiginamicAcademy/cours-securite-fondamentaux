@@ -9,8 +9,6 @@
 
 **Durée :** ≈ 20 min (lecture ≈ 10 min + atelier 8 min + réflexion) · **Prérequis :** [Pourquoi sécuriser ?](01-pourquoi-securiser.md)
 
-<!-- MODE TD : 🟢 découverte (accroche + §I, les quatre systèmes) → ✅ correction (atelier de cotation, §I) → 📘 cours (§II le coût des mesures, §III l'avis d'arbitrage) → 🔵 application (TP 02 — Arbitrer des mesures de sécurité) -->
-
 ---
 
 ## Objectifs

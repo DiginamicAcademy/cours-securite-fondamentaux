@@ -8,7 +8,7 @@
 # Les fondamentaux de la cybersécurité et de la sécurité informatique
 
 > Cours d'**autoformation** · **RNCP40573** Expert en informatique et systèmes d'information · **brique transversale de sécurité**, adossée au bloc **BC03** (compétence C25)
-> 1 journée(s) · supports **rédigés par IA**, relus et validés.
+> 1 journée · supports **rédigés par IA**, relus et validés.
 
 ---
 
@@ -45,36 +45,42 @@ Vous serez capable de :
 
 | # | Chapitre | Durée de lecture |
 | --- | --- | --- |
-| 01 | [Pourquoi sécuriser ? — Enjeux business et humains](01-pourquoi-securiser.md) | 45 min |
-| 02 | [Sécurité proportionnée — risque, coût et confort d'usage](02-securite-proportionnee.md) | 55 min |
-| 03 | [CID et vocabulaire du risque — les mots pour parler du risque](03-cid-et-vocabulaire.md) | 60 min |
-| 04 | [Le paysage de la cybersécurité — qui attaque, comment, et à quelle vitesse](04-paysage-cyber.md) | 60 min |
-| 05 | [Modèles de défense — la sécurité en couches](05-modeles-de-securite.md) | 50 min |
-| 06 | [Cadre juridique introductif — le RGPD comme contrainte technique](06-cadre-juridique-intro.md) | 55 min |
+| 01 | [Pourquoi sécuriser ? — Enjeux business et humains](01-pourquoi-securiser.md) | 15 min |
+| 02 | [Sécurité proportionnée — risque, coût et confort d'usage](02-securite-proportionnee.md) | 20 min |
+| 03 | [CID et vocabulaire du risque — les mots pour parler du risque](03-cid-et-vocabulaire.md) | 20 min |
+| 04 | [Le paysage de la cybersécurité — qui attaque, comment, et à quelle vitesse](04-paysage-cyber.md) | 20 min |
+| 05 | [Modèles de défense — la sécurité en couches](05-modeles-de-securite.md) | 20 min |
+| 06 | [Cadre juridique introductif — le RGPD comme contrainte technique](06-cadre-juridique-intro.md) | 25 min |
+| A | [Glossaire et ressources](A-Glossaire-et-ressources.md) | annexe, à consulter |
 
-**Travaux pratiques** — chaque énoncé se fait juste après le chapitre
-correspondant, puis se corrige soi-même :
+Les six chapitres totalisent **≈ 120 min** de travail, ateliers compris.
+
+**Travaux pratiques** — les cinq premiers se font juste après le chapitre
+correspondant, puis se corrigent en autonomie. L'exercice d'intégration
+clôt la journée :
 
 | | Sujet | Durée |
 | --- | --- | --- |
-| 🟢 | [Analyser un incident](tp/01-analyser-incident.md) · [corrigé](tp/corrige/01-analyser-incident.md) | 20 min |
-| 🟡 | [Arbitrer des mesures de sécurité](tp/02-arbitrer-mesures.md) · [corrigé](tp/corrige/02-arbitrer-mesures.md) | 35 min |
-| 🟡 | [Construire une matrice menace → vulnérabilité → risque](tp/03-vocabulaire-risque.md) · [corrigé](tp/corrige/03-vocabulaire-risque.md) | 35 min |
-| 🔵 | [Cartographier les zones de confiance d'une plateforme data](tp/04-cartographier-si.md) · [corrigé](tp/corrige/04-cartographier-si.md) | 45 min |
-| 🔴 | [Identifier les obligations RGPD sur un cas type](tp/05-defi-rgpd.md) · [corrigé](tp/corrige/05-defi-rgpd.md) | libre |
+| 🟢 | [Analyser un incident](tp/01-analyser-incident.md) · [corrigé](tp/corrige/01-analyser-incident.md) | 15 min |
+| 🟡 | [Arbitrer des mesures de sécurité](tp/02-arbitrer-mesures.md) · [corrigé](tp/corrige/02-arbitrer-mesures.md) | 30 min |
+| 🟡 | [Construire une matrice menace → vulnérabilité → risque](tp/03-vocabulaire-risque.md) · [corrigé](tp/corrige/03-vocabulaire-risque.md) | 25 min |
+| 🔵 | [Cartographier les zones de confiance d'une plateforme data](tp/04-cartographier-si.md) · [corrigé](tp/corrige/04-cartographier-si.md) | 30 min |
+| 🔴 | [Identifier les obligations RGPD sur un cas type](tp/05-defi-rgpd.md) · [corrigé](tp/corrige/05-defi-rgpd.md) | 30 min · facultatif |
+| 🔵 | [Exercice d'intégration — sécuriser le lancement d'une boutique en ligne](tp/INTEGRATION-J1.md) | 75 min |
 
 ---
 
-## ✅ Checkpoints de fin de journée
+## ✅ Checkpoints de fin de parcours
 
-À cocher avant de passer à la journée suivante. En cas de doute : ne pas
-avancer, revenir au concept concerné, refaire l'exercice.
+À cocher à la fin de la journée. Ce cours se suit en autoformation et il n'y a
+pas de journée suivante : ces cases ne verrouillent rien, elles vous indiquent
+où revenir. En cas de doute : ne pas avancer, revenir au concept concerné et
+consolider en refaisant les TP.
 
-### Jour 1 — chapitres 01 à 06
+### Chapitres 01 à 06
 
 - [ ] J'ai lu les chapitres 01 à 06 et les points clés sont clairs.
 - [ ] J'ai fait au moins les exercices 🟢 et 🟡 (partie principale), et vérifié mes réponses dans `tp/corrige/`. Les extensions « Pour aller plus loin » sont facultatives.
-- [ ] J'ai répondu au QCM formatif, lorsqu'il est disponible, et identifié mes notions à revoir.
 - [ ] Je sais expliquer, avec mes mots, les 2-3 idées principales de la journée.
 - [ ] Je peux appliquer ces idées à un cas simple (un extrait de code, une config, un flux).
 

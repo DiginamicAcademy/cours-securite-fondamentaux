@@ -10,6 +10,8 @@ GitHub et le support PDF les affichent.
 |---|---|---|
 | `Logo-diginamic-color.svg` | clair | en-tête du Readme et du support PDF |
 | `Logo-diginamic-color-blk.png` | sombre | en-tête du Readme quand GitHub est en thème sombre |
+| `kill-chain-simplifiee.svg` | clair | kill chain simplifiée — chapitre [04](../04-paysage-cyber.md) |
+| `risque-vulnerabilite-menace.svg` | clair | chapeau de risque (menace, vulnérabilité, impact) — chapitre [03](../03-cid-et-vocabulaire.md) |
 
 Les deux logos sont des copies du dépôt
 [PublicAssets](https://github.com/DiginamicInternal/PublicAssets). Le texte de

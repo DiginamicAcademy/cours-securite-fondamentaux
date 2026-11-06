@@ -8,8 +8,6 @@
 
 **Durée :** ≈ 15 min (lecture ≈ 8 min + atelier 5 min + réflexion) · **Prérequis :** aucun
 
-<!-- MODE TD : 🟢 découverte (accroche + §I, le cas hôpital) → ✅ correction (atelier « postes de coût », §I) → 📘 cours (§II les victimes, §III arbitrer) → 🔵 application (TP 01 — Analyser un incident) -->
-
 ---
 
 ## Objectifs

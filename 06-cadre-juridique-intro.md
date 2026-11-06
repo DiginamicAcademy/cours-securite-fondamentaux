@@ -10,8 +10,6 @@
 
 **Durée :** ≈ 25 min (lecture ≈ 12 min + atelier 8 min + réflexion) · **Prérequis :** [Modèles de défense](05-modeles-de-securite.md)
 
-<!-- MODE TD : 🟢 découverte (accroche + §I, le RGPD en bref) → ✅ correction (atelier « table commandes », §II) → 📘 cours (§II la violation, §III les transversales) → 🔵 application (TP 05 — Identifier les obligations RGPD) -->
-
 ---
 
 ## Objectifs

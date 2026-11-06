@@ -9,8 +9,6 @@
 
 **Durée :** ≈ 20 min (lecture ≈ 12 min + atelier 5 min + réflexion et lecture de code) · **Prérequis :** [Sécurité proportionnée](02-securite-proportionnee.md)
 
-<!-- MODE TD : 🟢 découverte (accroche + §I, le caissier) → ✅ correction (atelier rançongiciel, §I) → 📘 cours (§II la chaîne du risque, §III la surface d'attaque) → 🔵 application (TP 03 — Matrice menace → vulnérabilité → risque) -->
-
 ---
 
 ## Objectifs

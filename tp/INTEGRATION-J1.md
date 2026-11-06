@@ -1,7 +1,7 @@
 # Exercice d'intégration — Sécuriser le lancement d'une boutique en ligne
 
 > **Nature :** exercice d'intégration (non noté) · **Durée :** 75 min · **Notion :** mobiliser toute la journée, de l'enjeu métier à la note de sécurité
-> 🔵 **Intégration** · **Lien :** la journée entière ([chapitres 01 à 06](Readme.md))
+> 🔵 **Intégration** · **Lien :** la journée entière ([chapitres 01 à 06](../Readme.md))
 > **Objectif :** produire une note de sécurité de lancement, de bout en bout, pour un service simple.
 
 ---

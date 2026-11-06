@@ -9,8 +9,6 @@
 
 **Durée :** ≈ 20 min (lecture ≈ 12 min + atelier 5 min + réflexion et lecture de code) · **Prérequis :** [Le paysage de la cybersécurité](04-paysage-cyber.md)
 
-<!-- MODE TD : 🟢 découverte (accroche + §I, le château fort) → ✅ correction (atelier des couches, §I) → 📘 cours (§II Zero Trust, §III le moindre privilège, §IV la maturité) → 🔵 application (TP 04 — Cartographier les zones de confiance) -->
-
 ---
 
 ## Objectifs
