@@ -145,8 +145,6 @@ il dépend de la criticité du système — on retrouve la logique de
 - **NIST CSF** : le cadre détaillé, ses niveaux de maturité et ses critères
   d'évaluation — pour transformer la photographie de la section IV en plan
   d'action.
-- ⚠️ **À ARBITRER** — **Les modèles de maturité** en général : même logique que
-  le NIST CSF. *Redondant avec la section IV : suppression envisageable.*
 - **L'IAM (Identity and Access Management, gestion des identités et des accès)** :
   la brique technique qui rend le moindre privilège applicable à grande échelle —
   provisionnement, revue des droits, suppression des comptes.

@@ -151,9 +151,6 @@ base:
   mot_de_passe: mot-de-passe-en-clair
 ```
 
-> ⚠️ **À ARBITRER** — *Second extrait qui illustre le même point que le précédent :
-> suppression envisageable.*
-
 Cartographier sa surface d'attaque, c'est donc lister trois choses : ce qui est
 **joignable**, ce qui est **visible**, et ce qui **permet d'aller plus loin** (un
 compte, une clé, une donnée qui en révèle une autre). C'est le sujet de

@@ -108,9 +108,6 @@ met trois semaines à comprendre ce qui s'est passé, puis notifie, est hors dé
 
 ## III. Les transversales
 
-> ⚠️ **À ARBITRER** — *Section hors sujet central (la sécurité comme contrainte
-> technique) : suppression envisageable si le temps manque.*
-
 Le RGPD n'est pas le seul cadre à croiser. Deux autres préoccupations
 reviennent dans les cahiers des charges, et se traitent au même moment : à la
 conception.
