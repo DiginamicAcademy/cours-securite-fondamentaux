@@ -173,4 +173,69 @@ les obligations d'achat public, et toujours dans la durée de vie du service.
 
 ---
 
+## 🧠 Vérifiez vos acquis
+
+*Formatif, jamais noté. Répondez sans relire le chapitre, puis cochez. Les réponses sont juste après le séparateur : ce qui compte est de repérer où vous vacillez, pas de faire 5 sur 5.*
+
+**1.** Un formulaire collecte le numéro de téléphone « on ne sait jamais ». Quel principe du RGPD est en cause, et quelle en est la traduction technique ?
+
+- A. La finalité : documenter la raison d'être de chaque champ
+- B. La minimisation : supprimer les champs collectés par précaution
+- C. La transparence : informer les personnes en langage clair
+- D. L'exactitude : permettre la rectification en ligne
+
+- [ ] ✓ je savais
+
+**2.** Lequel de ces éléments est une donnée personnelle alors qu'il paraît purement technique ?
+
+- A. Le montant total d'une commande
+- B. Un identifiant de session
+- C. Le code promo utilisé
+- D. La date de la commande
+
+- [ ] ✓ je savais
+
+**3.** À partir de quel moment court le délai de notification de 72 heures ?
+
+- A. De la découverte technique complète de l'incident
+- B. De la connaissance de l'incident
+- C. De la première réclamation d'une personne concernée
+- D. De la publication de la faille exploitée
+
+- [ ] ✓ je savais
+
+**4.** L'hébergeur qui stocke la base de la boutique en ligne est, au sens du RGPD :
+
+- A. responsable de traitement, puisqu'il détient physiquement les données
+- B. sous-traitant, puisqu'il traite les données pour le compte de l'entreprise qui vend
+- C. hors du champ du texte, puisqu'il ne vend rien aux clients
+- D. l'autorité de contrôle des opérations de la boutique
+
+- [ ] ✓ je savais
+
+**5.** *Question ouverte (2-3 lignes).* Un collègue propose de traiter l'accessibilité et la purge des données « à la recette, à la fin du projet ». Répondez en vous appuyant sur le chapitre, et citez les deux référentiels d'accessibilité qu'il mentionne.
+
+- [ ] ✓ je savais
+
+---
+
+### Réponses
+
+**1. B.** La minimisation impose de ne collecter que le strict nécessaire, ce qui se traduit par la suppression des champs « on ne sait jamais ».
+**Pourquoi :** la finalité est le principe voisin — collecter pour une raison précise et annoncée — mais ici c'est l'absence de besoin qui est en cause, et donc la suppression du champ.
+
+**2. B.** Une donnée personnelle est tout ce qui identifie directement ou indirectement : le chapitre cite l'identifiant de session, l'adresse IP, l'historique d'achats ou la géolocalisation.
+**Pourquoi :** un identifiant technique « anonyme » qui permet de retrouver une personne est une donnée personnelle, ce qui surprend souvent côté développement.
+
+**3. B.** Le délai court à partir de la connaissance de l'incident, pas de sa découverte technique complète.
+**Pourquoi :** une organisation qui met trois semaines à comprendre ce qui s'est passé, puis notifie, est hors délai — et l'on documente de toute façon, même quand on ne notifie pas.
+
+**4. B.** Le responsable de traitement décide des finalités (l'entreprise qui vend) ; le sous-traitant traite pour son compte : hébergeur, prestataire d'envoi de courriels, éditeur du logiciel de gestion.
+**Pourquoi :** pour un développeur, choisir un prestataire, c'est encadrer un sous-traitant — contrat, instructions, sécurité.
+
+**5.** Attendu : une transversale plaquée après coup coûte dix fois plus cher qu'une transversale intégrée à la conception ; l'accessibilité PSH (Personnes en Situation de Handicap) et l'éco-conception se décident au moment du schéma de base et des maquettes ; les référentiels sont le RGAA (Référentiel général d'amélioration de l'accessibilité) en France et les WCAG (Web Content Accessibility Guidelines) à l'international.
+**Pourquoi :** l'accessibilité est obligatoire pour certains services (secteur public, grandes entreprises) et toujours utile ailleurs, et la protection des données se traduit en contraintes techniques dès la conception du schéma de base.
+
+---
+
 [← Chapitre précédent](05-modeles-de-securite.md) · [Sommaire](Readme.md) · [Chapitre suivant →](A-Glossaire-et-ressources.md)

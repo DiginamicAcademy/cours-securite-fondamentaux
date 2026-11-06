@@ -136,4 +136,69 @@ différence entre subir un incident et l'avoir anticipé.
 
 ---
 
+## 🧠 Vérifiez vos acquis
+
+*Formatif, jamais noté. Répondez sans relire le chapitre, puis cochez. Les réponses sont juste après le séparateur : ce qui compte est de repérer où vous vacillez, pas de faire 5 sur 5.*
+
+**1.** Quelles sont les trois questions qui suffisent à situer la criticité d'un système ?
+
+- A. Valeur des données, exposition, impact métier
+- B. Coût de la mesure, nombre d'utilisateurs, ancienneté du système
+- C. Confidentialité, intégrité, disponibilité
+- D. Menace, vulnérabilité, impact
+
+- [ ] ✓ je savais
+
+**2.** Parmi ces mesures, laquelle ne coûte rien à l'utilisateur au quotidien ?
+
+- A. L'authentification multi-facteurs (MFA)
+- B. L'expiration des sessions
+- C. Le chiffrement des sauvegardes
+- D. Des mots de passe longs et uniques
+
+- [ ] ✓ je savais
+
+**3.** Des mots de passe trop complexes exigés finissent notés sur des post-it collés aux écrans. Qu'est-ce que le chapitre en conclut ?
+
+- A. Qu'il faut ajouter la MFA pour compenser la faiblesse
+- B. Qu'une mesure que les utilisateurs contournent ne protège plus rien : elle donne seulement l'impression de protéger
+- C. Qu'il faut allonger encore la longueur minimale demandée
+- D. Qu'il faut vérifier les postes de travail pour retirer les notes
+
+- [ ] ✓ je savais
+
+**4.** Dans un avis d'arbitrage, pourquoi écrire ce que l'on écarte ?
+
+- A. Pour que l'auditeur puisse reprocher ce choix plus tard
+- B. Parce qu'une mesure écartée avec une raison est une décision, alors qu'une mesure écartée sans raison est un oubli
+- C. Parce que chaque ligne du budget doit être justifiée
+- D. Pour pouvoir rouvrir le dossier au prochain projet
+
+- [ ] ✓ je savais
+
+**5.** *Question ouverte (2-3 lignes).* On vous demande d'imposer la MFA partout dans la fromagerie. Rédigez les deux dernières rubriques de l'avis d'arbitrage : la recommandation, puis ce que vous écartez avec le risque résiduel accepté.
+
+- [ ] ✓ je savais
+
+---
+
+### Réponses
+
+**1. A.** Valeur des données, exposition, impact métier : la criticité naît de la combinaison des trois.
+**Pourquoi :** une donnée très sensible enfermée dans un réseau fermé et une donnée moyenne ouverte à tout Internet ne demandent pas les mêmes mesures — un site consulté par le monde entier peut rester sans enjeu s'il ne contient rien de sensible.
+
+**2. C.** Le chiffrement des sauvegardes n'a aucun coût d'usage, comme la journalisation des accès.
+**Pourquoi :** ce sont les mesures sans coût d'usage qui se généralisent ; celles qui coûtent du confort se réservent aux systèmes qui le méritent.
+
+**3. B.** Le prix d'une mesure se paie aussi en sécurité quand elle est mal calibrée : post-it, mots de passe réutilisés, MFA contournée par habitude.
+**Pourquoi :** le bon niveau n'est pas le maximum, c'est celui que les gens acceptent d'appliquer, là où le risque le justifie.
+
+**4. B.** Ce qu'on accepte de ne pas faire est un choix : il se motive, il se date, il se relit.
+**Pourquoi :** entre « on n'y a pas pensé » et « on a choisi de ne pas le faire, voilà pourquoi », il y a toute la différence entre subir un incident et l'avoir anticipé.
+
+**5.** Attendu : une recommandation bornée et motivée (par exemple la MFA sur les comptes qui touchent aux données clients et à l'administration, pas sur tous les postes) ; puis ce qui est écarté et pourquoi, avec le risque résiduel que l'on accepte d'assumer.
+**Pourquoi :** arbitrer, c'est choisir quoi faire **et** quoi ne pas faire — et l'écrire, pour que la décision soit relisible plus tard.
+
+---
+
 [← Chapitre précédent](01-pourquoi-securiser.md) · [Sommaire](Readme.md) · [Chapitre suivant →](03-cid-et-vocabulaire.md)

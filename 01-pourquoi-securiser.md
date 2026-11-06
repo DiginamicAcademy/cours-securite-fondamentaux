@@ -122,4 +122,69 @@ pour qui, contre quoi**.
 
 ---
 
+## 🧠 Vérifiez vos acquis
+
+*Formatif, jamais noté. Répondez sans relire le chapitre, puis cochez. Les réponses sont juste après le séparateur : ce qui compte est de repérer où vous vacillez, pas de faire 5 sur 5.*
+
+**1.** Un rançongiciel paralyse un hôpital : les systèmes sont hors service pendant des semaines, les urgences sont détournées. Quel poste de coût pèse le plus lourd, d'après le chapitre ?
+
+- A. La facture du prestataire qui reconstruit les systèmes
+- B. L'activité arrêtée : urgences détournées, interventions reportées, dossiers patients remis sur papier
+- C. L'amende prononcée pour les manquements légaux
+- D. Le rachat du matériel remplacé pendant l'incident
+
+- [ ] ✓ je savais
+
+**2.** L'attaque d'une entreprise est partie d'un sous-traitant. Pourquoi le chapitre place-t-il les partenaires et fournisseurs parmi les victimes ?
+
+- A. Parce qu'ils paient la rançon à la place de l'entreprise attaquée
+- B. Parce qu'un maillon faible compromet la chaîne : l'attaque passe souvent par un sous-traitant
+- C. Parce qu'ils portent légalement la sécurité de leur client
+- D. Parce qu'ils subissent la même panne de matériel
+
+- [ ] ✓ je savais
+
+**3.** Si chaque incident coûte cher, pourquoi ne pas empiler toutes les mesures de sécurité disponibles ?
+
+- A. Parce que les outils du marché ne savent pas protéger une TPE
+- B. Parce que la sécurité a elle aussi un coût : argent, temps, confort des utilisateurs, vitesse de développement
+- C. Parce qu'accumuler les mesures est interdit par le cadre juridique
+- D. Parce qu'une seule mesure bien choisie suffit toujours
+
+- [ ] ✓ je savais
+
+**4.** Avant de choisir un outil de sécurité, que faut-il se demander ?
+
+- A. Combien d'alertes l'outil est capable de produire par jour
+- B. Ce qu'on protège, pour qui, contre quoi
+- C. Quels concurrents l'utilisent déjà
+- D. Si l'outil est référencé par un cadre international
+
+- [ ] ✓ je savais
+
+**5.** *Question ouverte (2-3 lignes).* La fromagerie perd la base de ses commandes clients (noms, adresses, historique d'achats), qui devient en plus inaccessible. Dites qui sont les victimes et quels postes de coût l'entreprise va payer.
+
+- [ ] ✓ je savais
+
+---
+
+### Réponses
+
+**1. B.** La réparation technique n'est qu'une petite ligne du bilan : c'est l'interruption d'activité qui plombe le résultat.
+**Pourquoi :** le chapitre oppose explicitement la facture du prestataire informatique au coût de l'activité arrêtée, et l'exemple de l'hôpital se mesure en lits, en soins et en interventions reportées.
+
+**2. B.** Les partenaires et les fournisseurs sont victimes parce que la chaîne est aussi solide que son maillon le plus faible.
+**Pourquoi :** c'est pour cela que la sécurité n'est pas l'affaire du seul service informatique : elle engage la continuité du service et la responsabilité légale de l'organisation.
+
+**3. B.** Sécuriser a un prix, en argent, en temps, en confort d'usage et en vitesse de développement : la sécurité est un arbitrage, pas une accumulation.
+**Pourquoi :** on protège ce qui a de la valeur, à la mesure de ce qui le menace — protéger la page vitrine d'un artisan comme un système bancaire est un gaspillage, et l'inverse une négligence.
+
+**4. B.** Le réflexe du chapitre passe avant toute question d'outil : ce qu'on protège, pour qui, contre quoi.
+**Pourquoi :** la valeur des actifs et la menace déterminent le niveau de protection, et non l'inverse.
+
+**5.** Attendu : les victimes sont les clients (données personnelles qui circulent sans contrôle) et les employés (identifiants réutilisables ailleurs, charge de la remise en état), et l'entreprise paie l'interruption d'activité, la réparation et remise en état, l'image et la confiance abîmées, éventuellement des sanctions et des contentieux.
+**Pourquoi :** un incident dépasse presque toujours l'entreprise elle-même, et son coût se répartit sur plusieurs postes dont la réparation technique n'est pas le plus lourd.
+
+---
+
 [Sommaire](Readme.md) · [Chapitre suivant →](02-securite-proportionnee.md)

@@ -191,4 +191,69 @@ l'exercice de ce bloc.
 
 ---
 
+## 🧠 Vérifiez vos acquis
+
+*Formatif, jamais noté. Répondez sans relire le chapitre, puis cochez. Les réponses sont juste après le séparateur : ce qui compte est de repérer où vous vacillez, pas de faire 5 sur 5.*
+
+**1.** Un prix est modifié sans droit dans la base de la boutique. Quel pilier du CID est atteint ?
+
+- A. La confidentialité
+- B. L'intégrité
+- C. La disponibilité
+- D. Aucun : le prix reste affiché en rayon
+
+- [ ] ✓ je savais
+
+**2.** Un rançongiciel chiffre les serveurs d'une clinique, et l'attaquant affirme avoir copié les dossiers avant de frapper. Quels piliers du CID sont touchés ?
+
+- A. Seulement la disponibilité : les données sont devenues illisibles
+- B. Les trois : illisibles (disponibilité), copiées (confidentialité), altérées (intégrité)
+- C. Seulement la confidentialité : rien n'est détruit
+- D. Aucun : les données existent encore quelque part
+
+- [ ] ✓ je savais
+
+**3.** Dans le cas des exports de ventes déposés dans un compartiment de stockage ouvert sur Internet, que désigne le mot « menace » ?
+
+- A. Le robot automatisé qui balaye Internet à la recherche de compartiments mal configurés
+- B. Le compartiment accessible sans authentification
+- C. La fuite des exports contenant des coordonnées clients
+- D. La notification aux personnes concernées et la sanction possible
+
+- [ ] ✓ je savais
+
+**4.** Sur ce même cas, sur quoi le chapitre dit-il d'agir ?
+
+- A. Empêcher ce robot d'exister
+- B. Refermer le compartiment pour traiter la vulnérabilité, et chiffrer les exports pour réduire l'impact
+- C. Supprimer les exports pour qu'il n'y ait plus rien à fuiter
+- D. Attendre que le risque se réalise pour mesurer sa gravité
+
+- [ ] ✓ je savais
+
+**5.** *Question ouverte (2-3 lignes).* Un fichier de configuration committé dans un dépôt Git contient en clair les identifiants de la base de production. À quelle(s) famille(s) de la surface d'attaque cela appartient-il, et que doit lister une cartographie de cette surface ?
+
+- [ ] ✓ je savais
+
+---
+
+### Réponses
+
+**1. B.** L'information est devenue fausse, altérée sans droit : c'est exactement l'étiquette modifiée par le caissier.
+**Pourquoi :** l'intégrité porte sur l'exactitude et la complétude de l'information, pas sur le fait qu'elle ait été lue par un tiers (confidentialité) ni qu'elle soit inaccessible (disponibilité).
+
+**2. B.** Un même incident touche rarement un seul pilier, et le rançongiciel en est l'exemple type du chapitre.
+**Pourquoi :** c'est le sens des trois questions à poser pour qualifier une atteinte : qui a vu ce qu'il ne devait pas, qu'est-ce qui a été modifié ou détruit, qu'est-ce qui n'est plus accessible.
+
+**3. A.** La menace est ce qui peut causer le dommage.
+**Pourquoi :** le compartiment accessible sans authentification est la vulnérabilité, la fuite des exports est le risque, la notification et la sanction possible sont l'impact — les quatre mots ont chacun une place, dans cet ordre.
+
+**4. B.** On traite rarement la menace elle-même — empêcher qu'un robot existe n'est pas possible — on traite la vulnérabilité et on réduit l'impact.
+**Pourquoi :** la chaîne menace → vulnérabilité → risque → impact n'est pas qu'un vocabulaire : elle indique où agir.
+
+**5.** Attendu : c'est à la fois une donnée exposée (le fichier de configuration) et une identité compromise (des comptes et leurs mots de passe) ; la cartographie liste ce qui est joignable, ce qui est visible, et ce qui permet d'aller plus loin — un compte, une clé, une donnée qui en révèle une autre.
+**Pourquoi :** la surface d'attaque ne se limite pas à la page de connexion : elle commence dès qu'un élément est joignable, visible ou devinable, parfois avant même le code.
+
+---
+
 [← Chapitre précédent](02-securite-proportionnee.md) · [Sommaire](Readme.md) · [Chapitre suivant →](04-paysage-cyber.md)

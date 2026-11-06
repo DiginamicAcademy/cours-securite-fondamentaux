@@ -159,4 +159,69 @@ D'où trois réflexes :
 
 ---
 
+## 🧠 Vérifiez vos acquis
+
+*Formatif, jamais noté. Répondez sans relire le chapitre, puis cochez. Les réponses sont juste après le séparateur : ce qui compte est de repérer où vous vacillez, pas de faire 5 sur 5.*
+
+**1.** Qu'est-ce qui distingue principalement un curieux (script kiddie) d'une APT (Advanced Persistent Threat) ?
+
+- A. Le premier cherche de l'argent, la seconde une idéologie
+- B. Les moyens et le temps consacrés : outils téléchargés et scans bruyants d'un côté, des mois de préparation et une intrusion invisible de l'autre
+- C. Le premier agit depuis l'étranger, la seconde depuis le pays
+- D. Le premier s'attaque aux sites, la seconde uniquement aux banques
+
+- [ ] ✓ je savais
+
+**2.** Après être entré, l'attaquant crée un compte discret et planifie une tâche. À quelle étape de la kill chain cela correspond-il ?
+
+- A. La reconnaissance
+- B. L'exploitation
+- C. La persistance
+- D. L'exfiltration
+
+- [ ] ✓ je savais
+
+**3.** Que dit le chapitre de l'IA (intelligence artificielle) dans la course patch / exploit ?
+
+- A. Elle donne un avantage décisif aux défenseurs, qui détectent plus vite
+- B. Elle accélère les deux camps, et l'avantage reste au camp qui exécute le plus vite
+- C. Elle rend les correctifs inutiles, les failles étant corrigées avant d'être publiées
+- D. Elle ne concerne que la génération d'exploits, jamais la défense
+
+- [ ] ✓ je savais
+
+**4.** WannaCry (mai 2017) a paralysé des hôpitaux avec une faille corrigée par l'éditeur dès mars 2017. Qu'est-ce qui a fait défaut ?
+
+- A. La technique : la faille ne pouvait pas être corrigée plus tôt
+- B. Le délai : la fenêtre entre la publication du correctif et son application
+- C. L'absence de correctif, l'éditeur n'ayant rien publié
+- D. Le manque d'outils de détection dans les hôpitaux
+
+- [ ] ✓ je savais
+
+**5.** *Question ouverte (2-3 lignes).* Un élu déclare : « notre mairie n'a rien d'intéressant à voler ». Répondez en vous appuyant sur le chapitre, puis citez une mesure qui coupe la chaîne à l'étape de la reconnaissance.
+
+- [ ] ✓ je savais
+
+---
+
+### Réponses
+
+**1. B.** Ce qui sépare les acteurs, c'est la motivation, les moyens et le temps qu'ils peuvent y consacrer — et les moyens montent vite avec la motivation.
+**Pourquoi :** un outil de curieux est bruyant et grossier, une APT prépare son intrusion pendant des mois et sait rester invisible ; les cibles ne sont pas les mêmes non plus (infrastructures critiques et administrations pour une APT).
+
+**2. C.** Rester : créer un compte, planifier une tâche, installer une porte dérobée — c'est la persistance.
+**Pourquoi :** la défense correspondante est la revue des comptes et la surveillance des changements, et une exploitation sans persistance se voit plus vite.
+
+**3. B.** L'IA aide à générer des exploits, à tester des variantes et à automatiser les scans, mais aussi à trier les alertes, à détecter les anomalies et à rédiger les correctifs.
+**Pourquoi :** le temps de réaction compte plus que la perfection : l'avantage reste au camp qui exécute le plus vite.
+
+**4. B.** Le problème n'était pas la technique mais le délai : deux mois se sont écoulés entre le correctif et l'exploitation par un ver automatisé, au détriment de ceux qui ne l'avaient pas encore appliqué.
+**Pourquoi :** la fenêtre d'exposition, entre la publication d'un correctif et son application, est un indicateur de sécurité à part entière.
+
+**5.** Attendu : les attaques automatisées ne choisissent pas leur cible selon son intérêt, elles prennent ce qui est joignable et non corrigé ; à l'étape de la reconnaissance, on réduit ce qui est exposé (une annonce de recrutement qui détaille la stack technique, un dépôt Git public, un profil professionnel complet) et on sensibilise aux publications.
+**Pourquoi :** la reconnaissance alimente l'étape suivante, et la défense n'a pas à gagner partout : elle doit gagner une fois sur la chaîne.
+
+---
+
 [← Chapitre précédent](03-cid-et-vocabulaire.md) · [Sommaire](Readme.md) · [Chapitre suivant →](05-modeles-de-securite.md)

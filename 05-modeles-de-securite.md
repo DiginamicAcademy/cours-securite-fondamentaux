@@ -170,4 +170,69 @@ il dépend de la criticité du système — on retrouve la logique de
 
 ---
 
+## 🧠 Vérifiez vos acquis
+
+*Formatif, jamais noté. Répondez sans relire le chapitre, puis cochez. Les réponses sont juste après le séparateur : ce qui compte est de repérer où vous vacillez, pas de faire 5 sur 5.*
+
+**1.** Dans la defense in depth (défense en profondeur), quel est le point décisif ?
+
+- A. Le nombre de couches, le plus élevé possible
+- B. Que les couches soient indépendantes : une défaillance isolée ne doit pas compromettre le tout
+- C. Que la couche réseau absorbe le plus gros du budget
+- D. Que chaque couche applique la même mesure de sécurité
+
+- [ ] ✓ je savais
+
+**2.** Un service en appelle un autre sur le même réseau interne. Que prescrit Zero Trust ?
+
+- A. Rien : à l'intérieur du réseau, la confiance est acquise
+- B. Le service s'authentifie, avec un accès accordé pour une durée et un périmètre limités
+- C. Le service doit passer par un pare-feu supplémentaire
+- D. Le service est bloqué jusqu'à une validation humaine
+
+- [ ] ✓ je savais
+
+**3.** Un job nocturne exporte les ventes vers un stockage d'objets. Comment le moindre privilège s'applique-t-il ?
+
+- A. On lui donne un compte administrateur pour éviter les blocages en production
+- B. Le job lit le répertoire dont il a besoin, pas tout le stockage, sur un compte taillé au plus juste et révisé périodiquement
+- C. On utilise un compte de service partagé avec l'équipe, plus simple à surveiller
+- D. On lui accorde tous les droits le temps du projet, en y revenant plus tard
+
+- [ ] ✓ je savais
+
+**4.** Quelles sont les cinq fonctions du NIST CSF (Cybersecurity Framework) ?
+
+- A. Identifier, protéger, détecter, répondre, restaurer
+- B. Confidentialité, intégrité, disponibilité, traçabilité, conformité
+- C. Prévenir, bloquer, corriger, auditer, sanctionner
+- D. Reconnaissance, intrusion, exploitation, persistance, exfiltration
+
+- [ ] ✓ je savais
+
+**5.** *Question ouverte (2-3 lignes).* Le chapitre parie que la couche qui manque le plus souvent dans les systèmes réels est la détection. Expliquez ce que change son absence, et citez deux mesures qui la constituent.
+
+- [ ] ✓ je savais
+
+---
+
+### Réponses
+
+**1. B.** L'empilement ne protège que si les mesures sont indépendantes.
+**Pourquoi :** si la même erreur de configuration ouvre le réseau, l'application et les données, l'empilement n'existe que sur le papier — et une mesure unique, même excellente, devient le seul point de défaillance du système.
+
+**2. B.** Chaque requête est vérifiée, quelle que soit son origine : un service qui en parle à un autre s'authentifie, même dans le même réseau.
+**Pourquoi :** le cloud, le travail à distance et les appels de service à service ont rendu la frontière intérieur/extérieur illisible — un compte volé est « à l'intérieur » sans que personne ne l'ait décidé. La confiance n'est plus déduite de la position, elle est prouvée à chaque appel.
+
+**3. B.** Chaque acteur — personne, application, tâche planifiée — ne dispose que du strict nécessaire, et rien de plus.
+**Pourquoi :** le moindre privilège réduit à la fois la probabilité qu'un accès compromis mène loin et l'impact quand cela arrive ; un compte partagé rendrait toute action non attribuable, et un droit accordé pour un projet survit souvent au projet.
+
+**4. A.** Identifier, protéger, détecter, répondre, restaurer : une échelle commune pour se situer, comparer et progresser.
+**Pourquoi :** on obtient une photographie honnête plutôt qu'une liste de vœux, et le niveau visé dépend de la criticité du système — la logique de sécurité proportionnée.
+
+**5.** Attendu : sans détection, une défense contournée reste invisible — l'attaque se déroule sans que personne ne réagisse ; deux mesures de cette couche : la journalisation centralisée et les alertes.
+**Pourquoi :** la détection est une couche à part entière, dont le rôle est de voir et de réagir ; c'est elle qui manque le plus souvent dans les systèmes réels.
+
+---
+
 [← Chapitre précédent](04-paysage-cyber.md) · [Sommaire](Readme.md) · [Chapitre suivant →](06-cadre-juridique-intro.md)
