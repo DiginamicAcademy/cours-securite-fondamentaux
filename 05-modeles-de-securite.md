@@ -77,7 +77,7 @@ requête est vérifiée, quelle que soit son origine**. Concrètement :
   seing, et un changement de contexte (lieu, appareil, comportement) peut la
   remettre en question ;
 - le cloisonnement découpe le système en zones où une compromission reste
-  locale (voir la [cartographie des zones de confiance](tp/04-cartographier-si.md)).
+  locale (voir l'exercice 1 de ce chapitre).
 
 Exemple tiré d'une plateforme data : un worker d'orchestration (Airflow) qui
 accède à un stockage d'objet (MinIO) présente un jeton propre à sa tâche, valable
@@ -138,6 +138,175 @@ il dépend de la criticité du système — on retrouve la logique de
 
 ---
 
+### Exercice 1 — Cartographier les zones de confiance d'une plateforme data (30 min)
+
+**Contexte.**
+
+Une plateforme de décisionnel consolide les ventes d'une chaîne de magasins et
+les restitue aux équipes. Elle repose sur cinq composants :
+
+- une **API web** (FastAPI) qui expose des indicateurs de vente, accessible
+  depuis Internet ;
+- une **base PostgreSQL** qui stocke les données de vente consolidées ;
+- un **stockage d'objet** (MinIO) qui reçoit les exports quotidiens des boutiques ;
+- un **orchestrateur de traitements** (Airflow) qui déclenche les exports et les
+  chargements ;
+- les **utilisateurs** : analystes data, service client et direction, qui se
+  connectent depuis le réseau interne ou à distance.
+
+L'équipe data doit présenter sa plateforme à la direction sous l'angle sécurité.
+Votre mission : produire la carte qui rend cette présentation crédible.
+
+**Partie 1 — Lister les composants et les flux.**
+
+Pour chaque composant, indiquez ce qu'il **reçoit**, ce qu'il **envoie**, et
+**à qui**. Formalisez ensuite la liste des flux sous la forme
+`source → destination` avec, pour chacun, le **contenu** transporté et le
+**sens** (lecture, écriture, les deux).
+
+**Partie 2 — Délimiter les zones de confiance.**
+
+Regroupez les composants en **zones de confiance** — l'équipe en retient
+généralement quatre sur ce type de plateforme. Pour chaque zone : un nom, ce
+qu'elle contient, et la **justification de chaque frontière** : pourquoi ce qui
+est d'un côté n'a pas besoin d'être de l'autre.
+
+**Partie 3 — Placer les étapes de la kill chain.**
+
+Les cinq étapes de la kill chain (reconnaissance, intrusion, exploitation,
+persistance, exfiltration) se déroulent quelque part sur votre carte. Pour
+chacune : la **zone** où elle se passe le plus probablement, le **composant**
+visé, et **ce qui la rend possible** ici.
+
+**Partie 4 — Points de contrôle.**
+
+Pour chaque flux qui franchit une frontière, nommez le **contrôle** qui devrait
+exister (authentification, chiffrement, journalisation, filtrage…). Distinguez
+les contrôles qui **empêchent** de ceux qui **détectent**.
+
+**Avant d'ouvrir la correction**, vérifiez que :
+
+- [ ] Ma liste de flux indique source, destination, contenu et sens pour chaque flux.
+- [ ] Mes zones sont nommées et peuplées, et chaque frontière est justifiée.
+- [ ] Les cinq étapes de la kill chain sont placées sur la carte, avec le composant visé.
+- [ ] Chaque flux qui franchit une frontière a au moins un contrôle associé.
+- [ ] J'ai distingué les contrôles qui empêchent de ceux qui détectent.
+
+*Pour aller plus loin (facultatif).*
+
+Un analyste doit accéder à la base depuis l'extérieur du réseau
+interne. Redessinez la carte pour intégrer ce flux : qu'est-ce qui change dans
+vos zones et dans vos contrôles ?
+
+<details>
+<summary>Voir la correction</summary>
+
+Comparez d'abord votre travail aux **étapes** ci-dessous : la méthode compte autant que le résultat. Une autre découpe en zones peut se défendre, à condition d'être justifiée.
+
+**Partie 1 — Lister les composants et les flux.**
+
+**Éléments attendus** — une liste de flux, pas une liste de machines :
+
+| Flux | Source | Destination | Contenu | Sens |
+| --- | --- | --- | --- | --- |
+| F1 | Les boutiques | Stockage d'objet | Exports quotidiens de ventes | Écriture |
+| F2 | Orchestrateur | Stockage d'objet | Lecture des exports pour chargement | Lecture |
+| F3 | Orchestrateur | Base de données | Données consolidées | Écriture |
+| F4 | API web | Base de données | Indicateurs agrégés | Lecture |
+| F5 | Utilisateurs | API web | Consultation des tableaux de bord | Lecture |
+
+**Ce qu'il faut retenir :** un flux se décrit par sa **source**, sa
+**destination**, son **contenu** et son **sens**. Sans le contenu, on ne sait pas
+ce qui fuit en cas de problème ; sans le sens, on ne sait pas qui a le droit
+d'écrire où.
+
+**Partie 2 — Délimiter les zones de confiance.**
+
+**Découpe indicative** en quatre zones :
+
+| Zone | Contenu | Niveau de confiance |
+| --- | --- | --- |
+| **Zone publique** | Internet, les boutiques qui déposent leurs exports, les utilisateurs à distance | aucune confiance a priori |
+| **Zone de présentation** | l'API web | exposée, donc conçue pour être hostile |
+| **Zone de traitement** | l'orchestrateur de traitements | confiance technique, accès restreint |
+| **Zone de données** | la base de données et le stockage d'objet | la valeur de la plateforme |
+
+**Justification des frontières :**
+
+- **Publique ↔ présentation** : tout ce qui vient de l'extérieur est non fiable ;
+  l'API web est le seul composant conçu pour l'être, et pour n'exposer que des
+  lectures.
+- **Présentation ↔ traitement** : l'API lit des indicateurs, elle ne déclenche
+  pas de traitements. Séparer les deux évite qu'une faille web donne la main sur
+  l'orchestration de la plateforme.
+- **Traitement ↔ données** : l'orchestrateur doit lire les exports et écrire les
+  données consolidées — un accès technique, limité à ce besoin, et rien de plus.
+- **Interne ↔ données** : les analystes interrogent la base, mais depuis des
+  postes identifiés, pas depuis n'importe où.
+
+**Erreur fréquente :** découper par type de machine (« les serveurs web, les
+serveurs de base ») au lieu de découper par **niveau de confiance**. Ce qui
+définit une zone, c'est la confiance qu'on lui accorde — pas la technologie qui
+la compose.
+
+**Partie 3 — Placer les étapes de la kill chain.**
+
+**Éléments attendus** (la zone et le composant varient selon votre carte, la
+logique reste la même) :
+
+| Étape | Zone | Composant visé | Ce qui la rend possible |
+| --- | --- | --- | --- |
+| **Reconnaissance** | publique | l'API web | tout ce qui est visible : documentation, schéma d'API, annonces de recrutement, dépôts publics |
+| **Intrusion** | présentation | l'API web ou un compte utilisateur | hameçonnage d'un analyste, identifiants réutilisés, faille web non corrigée |
+| **Exploitation** | traitement | l'orchestrateur | un compte de service trop puissant, un secret de configuration accessible depuis l'API |
+| **Persistance** | traitement ou données | l'orchestrateur, la base | tâche planifiée ajoutée, compte de service créé, vue de lecture oubliée |
+| **Exfiltration** | frontière sortante | le stockage d'objet ou la base | flux sortants non surveillés, copies vers un stockage externe |
+
+**Points de vigilance :**
+
+- L'**exfiltration** n'est pas « dans » une zone : c'est un **flux qui sort**.
+  Elle se voit aux frontières, ce qui en fait le contrôle le plus rentable de la
+  chaîne.
+- L'**orchestrateur** est souvent le maillon le plus utile à un attaquant : il
+  parle à tout le monde, déclenche des traitements, et détient des accès
+  techniques. L'oublier dans la carte est l'erreur la plus fréquente.
+
+**Partie 4 — Points de contrôle.**
+
+**Éléments attendus** — un contrôle par franchissement de frontière, avec sa
+nature :
+
+| Frontière | Contrôle | Empêche ou détecte |
+| --- | --- | --- |
+| Publique → présentation | authentification des utilisateurs, limitation du nombre de tentatives | empêche |
+| Publique → présentation | journalisation des accès et des erreurs | détecte |
+| Présentation → données | compte d'application aux privilèges limités (lecture seule des indicateurs) | empêche |
+| Présentation → données | journalisation des requêtes exécutées | détecte |
+| Traitement → données | comptes de service nominatifs, chiffrement du transport | empêche |
+| Traitement → données | alerte sur les volumes de lecture anormaux | détecte |
+| Boutiques → stockage | jeton d'accès propre à chaque boutique | empêche |
+| Boutiques → stockage | contrôle d'intégrité des exports reçus | détecte |
+
+**Erreurs fréquentes :** accumuler les contrôles qui **empêchent** sans jamais
+prévoir ceux qui **détectent** — alors qu'une protection contournée ne se voit
+qu'avec la détection ; ou citer un contrôle générique (« un pare-feu ») sans dire
+quelle frontière il protège et contre quoi.
+
+**Points à retenir.**
+
+- Une **zone de confiance** regroupe ce à quoi on accorde le même niveau de
+  confiance — pas le même type de machine.
+- La **kill chain** se lit sur la carte : chaque étape est une zone, un composant
+  et une condition qui la rend possible.
+- L'**exfiltration** se détecte aux frontières sortantes : c'est là que la
+  surveillance rapporte le plus.
+- Tout flux qui franchit une frontière porte **au moins un contrôle**, et l'on
+  sait s'il empêche ou s'il détecte.
+
+</details>
+
+---
+
 ## V. Aller plus loin
 
 > ⏭️ **Facultatif — pas exigé pour finir la journée.**
@@ -172,34 +341,28 @@ il dépend de la criticité du système — on retrouve la logique de
 
 ## 🧠 Vérifiez vos acquis
 
-*Formatif, jamais noté. Répondez sans relire le chapitre, puis cochez. Les réponses sont juste après le séparateur : ce qui compte est de repérer où vous vacillez, pas de faire 5 sur 5.*
+*Formatif, jamais noté. Répondez sans relire le chapitre. Les réponses se déplient juste après le séparateur : ce qui compte est de repérer où vous vacillez, pas de faire 5 sur 5.*
 
 **1.** Dans la defense in depth (défense en profondeur), quel est le point décisif ?
 
-- A. Le nombre de couches, le plus élevé possible
+- A. Le nombre de couches, le plus élevé possible : plus l'empilement est épais, moins une faille isolée est grave
 - B. Que les couches soient indépendantes : une défaillance isolée ne doit pas compromettre le tout
-- C. Que la couche réseau absorbe le plus gros du budget
-- D. Que chaque couche applique la même mesure de sécurité
-
-- [ ] ✓ je savais
+- C. Que la couche réseau absorbe le plus gros du budget, puisque c'est elle qui décide de ce qui est joignable
+- D. Que chaque couche applique la même mesure de sécurité, pour que le niveau de protection soit homogène
 
 **2.** Un service en appelle un autre sur le même réseau interne. Que prescrit Zero Trust ?
 
-- A. Rien : à l'intérieur du réseau, la confiance est acquise
+- A. Rien : à l'intérieur du réseau, la confiance est acquise et l'authentification ne ferait que ralentir les échanges
 - B. Le service s'authentifie, avec un accès accordé pour une durée et un périmètre limités
-- C. Le service doit passer par un pare-feu supplémentaire
-- D. Le service est bloqué jusqu'à une validation humaine
-
-- [ ] ✓ je savais
+- C. Le service doit passer par un pare-feu supplémentaire, placé entre les deux services pour filtrer leurs échanges
+- D. Le service est bloqué jusqu'à une validation humaine, qui autorise l'appel une fois puis le laisse passer
 
 **3.** Un job nocturne exporte les ventes vers un stockage d'objets. Comment le moindre privilège s'applique-t-il ?
 
-- A. On lui donne un compte administrateur pour éviter les blocages en production
+- A. On lui donne un compte administrateur pour éviter les blocages en production, quitte à le retirer plus tard
 - B. Le job lit le répertoire dont il a besoin, pas tout le stockage, sur un compte taillé au plus juste et révisé périodiquement
-- C. On utilise un compte de service partagé avec l'équipe, plus simple à surveiller
-- D. On lui accorde tous les droits le temps du projet, en y revenant plus tard
-
-- [ ] ✓ je savais
+- C. On utilise un compte de service partagé avec l'équipe, plus simple à surveiller et à dépanner la nuit
+- D. On lui accorde tous les droits le temps du projet, en revenant les restreindre une fois la livraison faite
 
 **4.** Quelles sont les cinq fonctions du NIST CSF (Cybersecurity Framework) ?
 
@@ -208,13 +371,12 @@ il dépend de la criticité du système — on retrouve la logique de
 - C. Prévenir, bloquer, corriger, auditer, sanctionner
 - D. Reconnaissance, intrusion, exploitation, persistance, exfiltration
 
-- [ ] ✓ je savais
-
 **5.** *Question ouverte (2-3 lignes).* Le chapitre parie que la couche qui manque le plus souvent dans les systèmes réels est la détection. Expliquez ce que change son absence, et citez deux mesures qui la constituent.
 
-- [ ] ✓ je savais
-
 ---
+
+<details>
+<summary>Vérifier ses réponses</summary>
 
 ### Réponses
 
@@ -232,6 +394,8 @@ il dépend de la criticité du système — on retrouve la logique de
 
 **5.** Attendu : sans détection, une défense contournée reste invisible — l'attaque se déroule sans que personne ne réagisse ; deux mesures de cette couche : la journalisation centralisée et les alertes.
 **Pourquoi :** la détection est une couche à part entière, dont le rôle est de voir et de réagir ; c'est elle qui manque le plus souvent dans les systèmes réels.
+
+</details>
 
 ---
 

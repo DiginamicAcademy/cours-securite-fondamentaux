@@ -97,6 +97,136 @@ pour qui, contre quoi**.
 
 ---
 
+### Exercice 1 — Analyser un incident (15 min)
+
+**Contexte.**
+
+**DIGICHEESE** (la fromagerie du fil rouge) vend ses fromages en ligne. Un lundi matin,
+Sophie, responsable des commandes, ouvre un courriel qui semble venir de son
+fournisseur de cartons. Elle clique sur le lien, saisit ses identifiants sur une
+page qui ressemble à s'y méprendre à l'extranet de la fromagerie.
+
+Dans la semaine qui suit :
+
+- des commandes clients disparaissent du suivi de livraison ;
+- plusieurs clients reçoivent un courriel de « remboursement » contenant un lien
+  de paiement suspect ;
+- la direction découvre la situation grâce à un client qui signale l'arnaque.
+
+**Partie 1 — Décrire l'incident.**
+
+En deux ou trois phrases, racontez ce qui s'est passé : **par quel point d'entrée**
+l'attaque est arrivée, et **ce que l'attaquant a pu obtenir**.
+
+**Partie 2 — Identifier les actifs touchés.**
+
+Listez les actifs concernés (données, systèmes, personnes). Classez-les en deux
+catégories : ce qui est **compromis** (l'attaquant y a accédé) et ce qui est
+**menacé** (impacté sans être forcément compromis).
+
+**Partie 3 — Classer selon les piliers CID (Confidentialité, Intégrité, Disponibilité).**
+
+Pour chaque pilier, dites s'il est affecté ou non, et justifiez en une phrase.
+Un pilier non affecté doit être justifié lui aussi.
+
+**Partie 4 — Estimer l'impact.**
+
+En vous appuyant sur les postes de coût du chapitre (interruption, réparation,
+image, sanctions, contentieux), listez les conséquences probables pour la
+fromagerie. Classez-les par gravité, de la plus grave à la moins grave, et
+expliquez votre classement en deux lignes.
+
+**Avant d'ouvrir la correction**, vérifiez que :
+
+- [ ] Ma description nomme le **point d'entrée** de l'attaque (et pas seulement ses conséquences).
+- [ ] J'ai distingué actifs **compromis** et actifs **menacés**.
+- [ ] J'ai donné un avis **justifié** pour les trois piliers CID, y compris ceux que je considère non affectés.
+- [ ] Ma liste d'impact cite au moins **trois postes de coût** parmi ceux du chapitre.
+- [ ] Mon classement de gravité s'appuie sur un **critère explicite** (argent, personnes, durée…).
+
+*Pour aller plus loin (facultatif).*
+
+Refaites le même exercice en supposant que l'attaquant n'a pas
+envoyé de faux courriels aux clients, mais s'est contenté de revendre la base de
+commandes. Qu'est-ce qui change dans votre classification ?
+
+<details>
+<summary>Voir la correction</summary>
+
+Comparez d'abord votre travail aux **étapes** ci-dessous : la méthode compte autant que le résultat.
+
+**Partie 1 — Décrire l'incident.**
+
+**Éléments attendus :**
+
+L'attaque est arrivée par un **courriel piégé** (hameçonnage) imitant un fournisseur.
+Sophie a cliqué sur un lien et saisi ses identifiants sur un faux site : l'attaquant
+a récupéré son compte d'accès à l'extranet. Avec cet accès, il a pu consulter les
+commandes clients, puis s'en servir pour envoyer de faux courriels de
+« remboursement » aux clients de la fromagerie.
+
+**Ce qu'il faut retenir :** le point d'entrée est **humain et organisationnel**
+(un courriel, un clic), pas une faille technique spectaculaire. La plupart des
+incidents commencent ainsi.
+
+**Partie 2 — Identifier les actifs touchés.**
+
+**Compromis** (l'attaquant y a accédé) :
+
+- le compte d'accès de Sophie à l'extranet ;
+- la base des commandes clients (noms, adresses, historique d'achats) ;
+- les coordonnées de contact des clients (utilisées pour les faux courriels).
+
+**Menacés** (impactés sans accès direct avéré) :
+
+- la confiance des clients envers la fromagerie ;
+- le système de suivi de livraison (données devenues peu fiables) ;
+- les comptes des autres employés (le même stratagème peut être rejoué).
+
+**Partie 3 — Classer selon les piliers CID (Confidentialité, Intégrité, Disponibilité).**
+
+| Pilier | Affecté ? | Justification |
+| --- | --- | --- |
+| **Confidentialité** | ✅ Oui | Les commandes clients ont été lues par un tiers non autorisé. |
+| **Intégrité** | ✅ Oui | Des commandes ont disparu du suivi : les données ont été modifiées ou supprimées. |
+| **Disponibilité** | ✅ Oui, partiellement | Le suivi de livraison est dégradé : les informations ne sont plus fiables ni accessibles normalement. |
+
+**Erreurs fréquentes :** considérer que la disponibilité n'est touchée que si le
+site tombe complètement. Une donnée devenue **inutilisable** parce qu'on ne lui
+fait plus confiance est aussi un problème de disponibilité. Inversement, ne pas
+justifier un pilier « non affecté » est une erreur : l'absence d'impact est un
+diagnostic, pas un oubli.
+
+**Partie 4 — Estimer l'impact.**
+
+**Éléments attendus** (classement indicatif — l'important est le critère explicite) :
+
+1. **Sanctions et contentieux** — des données personnelles ont fui : obligations
+   légales en jeu, plaintes possibles des clients.
+2. **Image et confiance** — les clients ont été directement contactés par
+   l'attaquant : la confiance est atteinte là où elle est la plus fragile.
+3. **Interruption d'activité** — le suivi de livraison est perturbé, le traitement
+   des commandes ralenti.
+4. **Réparation et remise en état** — investigation, réinitialisation des accès,
+   sécurisation du compte compromis.
+
+**Sur le classement :** deux critères se défendent — la **gravité pour les
+personnes** (ici les clients, d'où les sanctions et l'image en tête) ou le
+**coût financier direct** (où l'interruption d'activité peut passer devant). Ce
+qui est attendu, c'est que le critère soit **dit** : un classement sans critère
+affiché ne se discute pas.
+
+**Points à retenir.**
+
+- Le point d'entrée est souvent **humain** : un courriel, un clic, un identifiant.
+- Un même incident touche **plusieurs piliers CID** à la fois — rarement un seul.
+- L'impact se juge d'abord sur **les personnes et l'activité**, ensuite sur la technique.
+- Un classement d'impact n'a de valeur que si son **critère est explicite**.
+
+</details>
+
+---
+
 ## IV. Aller plus loin
 
 > ⏭️ **Facultatif — pas exigé pour finir la journée.**
@@ -124,49 +254,42 @@ pour qui, contre quoi**.
 
 ## 🧠 Vérifiez vos acquis
 
-*Formatif, jamais noté. Répondez sans relire le chapitre, puis cochez. Les réponses sont juste après le séparateur : ce qui compte est de repérer où vous vacillez, pas de faire 5 sur 5.*
+*Formatif, jamais noté. Répondez sans relire le chapitre. Les réponses se déplient juste après le séparateur : ce qui compte est de repérer où vous vacillez, pas de faire 5 sur 5.*
 
 **1.** Un rançongiciel paralyse un hôpital : les systèmes sont hors service pendant des semaines, les urgences sont détournées. Quel poste de coût pèse le plus lourd, d'après le chapitre ?
 
-- A. La facture du prestataire qui reconstruit les systèmes
+- A. Le montant de la rançon versée à l'attaquant, seul poste de coût qui se chiffre précisément au moment de l'incident
 - B. L'activité arrêtée : urgences détournées, interventions reportées, dossiers patients remis sur papier
-- C. L'amende prononcée pour les manquements légaux
-- D. Le rachat du matériel remplacé pendant l'incident
-
-- [ ] ✓ je savais
+- C. Le prix des outils de sécurité achetés pour l'année, et le nombre d'alertes qu'ils produisent par jour
+- D. Le temps passé par l'équipe technique à corriger la faille qui a permis l'intrusion, une fois l'incident clos
 
 **2.** L'attaque d'une entreprise est partie d'un sous-traitant. Pourquoi le chapitre place-t-il les partenaires et fournisseurs parmi les victimes ?
 
-- A. Parce qu'ils paient la rançon à la place de l'entreprise attaquée
+- A. L'authentification multi-facteurs (MFA) à chaque connexion, avec un code à saisir sur tous les postes
 - B. Parce qu'un maillon faible compromet la chaîne : l'attaque passe souvent par un sous-traitant
-- C. Parce qu'ils portent légalement la sécurité de leur client
-- D. Parce qu'ils subissent la même panne de matériel
-
-- [ ] ✓ je savais
+- C. L'expiration des sessions au bout de quelques minutes d'inactivité, donc une reconnexion en plein travail
+- D. Des mots de passe longs et uniques pour chaque service, avec un gestionnaire à apprivoiser
 
 **3.** Si chaque incident coûte cher, pourquoi ne pas empiler toutes les mesures de sécurité disponibles ?
 
-- A. Parce que les outils du marché ne savent pas protéger une TPE
+- A. Qu'il faut ajouter la MFA sur tous les comptes pour compenser la faiblesse révélée par le post-it
 - B. Parce que la sécurité a elle aussi un coût : argent, temps, confort des utilisateurs, vitesse de développement
-- C. Parce qu'accumuler les mesures est interdit par le cadre juridique
-- D. Parce qu'une seule mesure bien choisie suffit toujours
-
-- [ ] ✓ je savais
+- C. Qu'il faut allonger encore la longueur minimale demandée, pour rendre plus résistants les mots de passe restants
+- D. Qu'il faut une consigne de service pour retirer les notes et contrôler les postes de travail chaque mois
 
 **4.** Avant de choisir un outil de sécurité, que faut-il se demander ?
 
-- A. Combien d'alertes l'outil est capable de produire par jour
+- A. Pour que l'auditeur puisse retrouver la trace du choix et le reprocher plus tard à l'équipe qui l'a fait
 - B. Ce qu'on protège, pour qui, contre quoi
-- C. Quels concurrents l'utilisent déjà
-- D. Si l'outil est référencé par un cadre international
-
-- [ ] ✓ je savais
+- C. Parce que chaque ligne du budget doit être justifiée, y compris les mesures qui n'ont pas été achetées
+- D. Pour pouvoir rouvrir le dossier au prochain projet, quand les outils et les contraintes auront changé
 
 **5.** *Question ouverte (2-3 lignes).* La fromagerie perd la base de ses commandes clients (noms, adresses, historique d'achats), qui devient en plus inaccessible. Dites qui sont les victimes et quels postes de coût l'entreprise va payer.
 
-- [ ] ✓ je savais
-
 ---
+
+<details>
+<summary>Vérifier ses réponses</summary>
 
 ### Réponses
 
@@ -184,6 +307,8 @@ pour qui, contre quoi**.
 
 **5.** Attendu : les victimes sont les clients (données personnelles qui circulent sans contrôle) et les employés (identifiants réutilisables ailleurs, charge de la remise en état), et l'entreprise paie l'interruption d'activité, la réparation et remise en état, l'image et la confiance abîmées, éventuellement des sanctions et des contentieux.
 **Pourquoi :** un incident dépasse presque toujours l'entreprise elle-même, et son coût se répartit sur plusieurs postes dont la réparation technique n'est pas le plus lourd.
+
+</details>
 
 ---
 

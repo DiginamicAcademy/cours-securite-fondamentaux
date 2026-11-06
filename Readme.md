@@ -55,17 +55,17 @@ Vous serez capable de :
 
 Les six chapitres totalisent **≈ 120 min** de travail, ateliers compris.
 
-**Travaux pratiques** — les cinq premiers se font juste après le chapitre
-correspondant, puis se corrigent en autonomie. L'exercice d'intégration
+**Travaux pratiques** — les cinq premiers se font dans le chapitre qui enseigne
+la notion qu'ils appliquent, puis se corrigent en autonomie. L'exercice d'intégration
 clôt la journée :
 
 | | Sujet | Durée |
 | --- | --- | --- |
-| 🟢 | [Analyser un incident](tp/01-analyser-incident.md) · [corrigé](tp/corrige/01-analyser-incident.md) | 15 min |
-| 🟡 | [Arbitrer des mesures de sécurité](tp/02-arbitrer-mesures.md) · [corrigé](tp/corrige/02-arbitrer-mesures.md) | 30 min |
-| 🟡 | [Construire une matrice menace → vulnérabilité → risque](tp/03-vocabulaire-risque.md) · [corrigé](tp/corrige/03-vocabulaire-risque.md) | 25 min |
-| 🔵 | [Cartographier les zones de confiance d'une plateforme data](tp/04-cartographier-si.md) · [corrigé](tp/corrige/04-cartographier-si.md) | 30 min |
-| 🔴 | [Identifier les obligations RGPD sur un cas type](tp/05-defi-rgpd.md) · [corrigé](tp/corrige/05-defi-rgpd.md) | 30 min · facultatif |
+| 🟢 | Analyser un incident — dans le chapitre 01 (corrigé dépliable) | 15 min |
+| 🟡 | Arbitrer des mesures de sécurité — dans le chapitre 02 (corrigé dépliable) | 30 min |
+| 🟡 | Construire une matrice menace → vulnérabilité → risque — dans le chapitre 03 (corrigé dépliable) | 25 min |
+| 🔵 | Cartographier les zones de confiance d'une plateforme data — dans le chapitre 05 (corrigé dépliable) | 30 min |
+| 🔴 | Identifier les obligations RGPD sur un cas type — dans le chapitre 06 (corrigé dépliable, facultatif) | 30 min · facultatif |
 | 🔵 | [Exercice d'intégration — sécuriser le lancement d'une boutique en ligne](tp/INTEGRATION-J1.md) | 75 min |
 
 ---
@@ -73,14 +73,14 @@ clôt la journée :
 ## ✅ Checkpoints de fin de parcours
 
 À cocher à la fin de la journée. Ce cours se suit en autoformation et il n'y a
-pas de journée suivante : ces cases ne verrouillent rien, elles vous indiquent
-où revenir. En cas de doute : ne pas avancer, revenir au concept concerné et
+pas de journée suivante : ces cases ne verrouillent rien, elles vous indiquent
+où revenir. En cas de doute : ne pas avancer, revenir au concept concerné et
 consolider en refaisant les TP.
 
 ### Chapitres 01 à 06
 
 - [ ] J'ai lu les chapitres 01 à 06 et les points clés sont clairs.
-- [ ] J'ai fait au moins les exercices 🟢 et 🟡 (partie principale), et vérifié mes réponses dans `tp/corrige/`. Les extensions « Pour aller plus loin » sont facultatives.
+- [ ] J'ai fait au moins les exercices 🟢 et 🟡 (partie principale), et déplié la correction « Voir la correction » de chaque exercice, à la fin du chapitre qui le porte. Les extensions « Pour aller plus loin » sont facultatives.
 - [ ] Je sais expliquer, avec mes mots, les 2-3 idées principales de la journée.
 - [ ] Je peux appliquer ces idées à un cas simple (un extrait de code, une config, un flux).
 

@@ -110,7 +110,7 @@ journée.
 
 ## Dans ce cours
 
-- Les exercices, le TD et l'exercice d'intégration de fin de journée : le dossier `tp/`, avec leurs corrigés dans `tp/corrige/`.
+- Les exercices, le TD et le défi : ils sont **intégrés aux chapitres 01 à 06**, avec leur correction à déplier à la fin de chacun. L'exercice d'intégration de fin de journée reste dans `tp/INTEGRATION-J1.md`.
 
 ---
 

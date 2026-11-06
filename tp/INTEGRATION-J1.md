@@ -93,7 +93,7 @@ reconnaissance, intrusion, exploitation, persistance, exfiltration. Pour chaque
 
 ### 5. Cartographier les zones, défendre en couches — chapitre 05
 
-La méthode est celle de la [cartographie des zones de confiance](04-cartographier-si.md),
+La méthode est celle de l'**Exercice 1** du [chapitre 05](../05-modeles-de-securite.md),
 appliquée ici à votre contexte :
 
 - regroupez les briques en **zones de confiance** (deux à quatre) et listez les
