@@ -93,6 +93,19 @@ Le point qui surprend toujours : le délai court à partir de la **connaissance
 de l'incident, pas de sa découverte technique complète. Une organisation qui
 met trois semaines à comprendre ce qui s'est passé, puis notifie, est hors délai.
 
+L'horloge ci-dessous montre pourquoi le point de départ compte plus que la
+durée : le délai court dès la connaissance de l'incident, pas dès la fin de
+l'analyse technique.
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#eef2f9','primaryBorderColor':'#3b5b8d','primaryTextColor':'#1f3f6b','lineColor':'#3b5b8d','secondaryColor':'#dbe6f5','tertiaryColor':'#fde8e8','fontFamily':'DejaVu Sans'}}}%%
+flowchart LR
+    T0["T0 — prise de connaissance de l'incident"] --> N["Notifier la CNIL — au plus tard 72 h après T0"]
+    T0 --> D["Documenter — toujours, même sans notification"]
+    T0 --> P["Prévenir les personnes — si risque élevé pour leurs droits"]
+    T1["T0' — fin de l'investigation technique"] -.->|le délai a déjà couru depuis T0| N
+```
+
 > 🧪 **Atelier rapide (8 min)**
 >
 > Voici les colonnes de la table `commandes` d'une boutique en ligne :
