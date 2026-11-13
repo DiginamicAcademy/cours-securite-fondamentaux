@@ -124,6 +124,36 @@ Quatre familles à passer en revue :
 4. **Les dépendances** — bibliothèques tierces non mises à jour, images de
    conteneurs périmées, services tiers abandonnés.
 
+La carte ci-dessous pose ces quatre familles sur un système concret,
+**DIGICHEESE** (l'entreprise d'étude du parcours) : chaque famille a ses
+endroits à elle, et plusieurs convergent vers les mêmes données.
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#eef2f9','primaryBorderColor':'#3b5b8d','primaryTextColor':'#1f3f6b','lineColor':'#3b5b8d','secondaryColor':'#dbe6f5','tertiaryColor':'#fde8e8','fontFamily':'DejaVu Sans'}}}%%
+flowchart LR
+    NET["Internet"] --> API["Site et API /commandes"]
+    API --> BDD["Base de commandes"]
+    BDD --> SAU["Sauvegardes"]
+    NET --> ADM["Interface d'admin"]
+    GIT["Dépôt Git et secrets"] -.-> BDD
+    SVC["Comptes de service"] -.-> BDD
+    LIB["Bibliothèques tierces"] -.-> API
+    subgraph F1["Points d'entrée"]
+        API
+        ADM
+    end
+    subgraph F2["Données exposées"]
+        SAU
+        GIT
+    end
+    subgraph F3["Identités"]
+        SVC
+    end
+    subgraph F4["Dépendances"]
+        LIB
+    end
+```
+
 Un extrait suffit à voir le problème. Cette route d'API (FastAPI, en Python) est
 parfaitement fonctionnelle — et parfaitement exposée :
 
