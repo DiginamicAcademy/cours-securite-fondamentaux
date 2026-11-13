@@ -108,6 +108,23 @@ CVE-2021-44228 dans la nomenclature CVE (Common Vulnerabilities and Exposures) 
 exploitée dans le monde entier quelques heures après sa publication, alors que
 les correctifs mettaient des semaines à se déployer.
 
+Les deux couloirs ci-dessous posent les deux cas côte à côte : dans chacun, ce
+n'est pas la faille qui décide, c'est la fenêtre ouverte entre la publication et
+l'exploitation.
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#eef2f9','primaryBorderColor':'#3b5b8d','primaryTextColor':'#1f3f6b','lineColor':'#3b5b8d','secondaryColor':'#dbe6f5','tertiaryColor':'#fde8e8','fontFamily':'DejaVu Sans'}}}%%
+flowchart LR
+    subgraph W["WannaCry"]
+        direction LR
+        W1["Éditeur publie le correctif — mars 2017"] --> WF["Fenêtre d'exposition — deux mois"] --> W2["Ver automatisé exploite — mai 2017"]
+    end
+    subgraph L["Log4Shell"]
+        direction LR
+        L1["Publication de la faille — décembre 2021"] --> LF["Fenêtre d'exposition — quelques heures"] --> L2["Exploitations dans le monde entier"]
+    end
+```
+
 D'où trois réflexes :
 
 - **Le temps de réaction compte plus que la perfection.** Un correctif appliqué
