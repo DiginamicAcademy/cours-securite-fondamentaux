@@ -47,6 +47,20 @@ enfermée dans un réseau fermé n'appelle pas les mêmes mesures qu'une donnée
 moyenne ouverte à tout Internet — et un site consulté par le monde entier peut
 rester sans enjeu s'il ne contient rien de sensible.
 
+Le schéma ci-dessous montre ce modèle en une image : les trois critères ne se
+succèdent pas, ils se combinent, et c'est leur combinaison qui commande le
+niveau de protection.
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#eef2f9','primaryBorderColor':'#3b5b8d','primaryTextColor':'#1f3f6b','lineColor':'#3b5b8d','secondaryColor':'#dbe6f5','tertiaryColor':'#fde8e8','fontFamily':'DejaVu Sans'}}}%%
+flowchart LR
+    V["Valeur des données — que vaut ce qu'on y trouve ?"] --> C{"Criticité"}
+    E["Exposition — qui peut y accéder ?"] --> C
+    I["Impact métier — l'activité continue-t-elle ?"] --> C
+    C --> P["Niveau de protection"]
+    E -.->|se combinent| V
+```
+
 > 🧪 **Atelier rapide (8 min)**
 >
 > Classez les quatre systèmes du tableau sur une échelle de 1 (faible) à 5
