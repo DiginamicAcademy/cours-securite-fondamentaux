@@ -19,7 +19,7 @@ ce qui le menace**. Avant la boîte à outils, ce cours donne les réflexes de
 départ — regarder ce qu'on protège, mesurer ce qu'un incident coûte réellement,
 et arbitrer les mesures de sécurité au lieu de les accumuler.
 
-Le fil rouge est **DIGICHEESE** (la fromagerie du fil rouge) : une fromagerie qui
+L'entreprise d'étude du parcours est **DIGICHEESE** : une fromagerie qui
 vend du Comté en ligne, et dont les données clients ne valent pas les mêmes
 mesures que les codes d'accès d'une banque. Chaque notion est appliquée à ce cas,
 puis comparée à d'autres systèmes.

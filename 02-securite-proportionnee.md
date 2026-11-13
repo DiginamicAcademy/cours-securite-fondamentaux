@@ -114,7 +114,7 @@ différence entre subir un incident et l'avoir anticipé.
 **Contexte.**
 
 Après l'incident raconté dans le chapitre précédent, la direction de la fromagerie
-**DIGICHEESE** (la fromagerie du fil rouge) décide de revoir sa sécurité. Le cabinet qui l'accompagne
+**DIGICHEESE** (l'entreprise d'étude du parcours) décide de revoir sa sécurité. Le cabinet qui l'accompagne
 refuse de vendre « tout le catalogue » : il pose d'abord une question — qu'est-ce
 qui mérite quoi ?
 
