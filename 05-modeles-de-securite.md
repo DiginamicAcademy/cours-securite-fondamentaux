@@ -43,6 +43,22 @@ Le point décisif : ces couches doivent être **indépendantes**. Si la même e
 de configuration ouvre le réseau, l'application et les données, l'empilement
 n'existe que sur le papier.
 
+Le schéma ci-dessous essaie de rendre cet empilement : quatre couches traversées
+l'une après l'autre, et une cinquième, transverse, qui voit passer les quatre.
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#eef2f9','primaryBorderColor':'#3b5b8d','primaryTextColor':'#1f3f6b','lineColor':'#3b5b8d','secondaryColor':'#dbe6f5','tertiaryColor':'#fde8e8','fontFamily':'DejaVu Sans'}}}%%
+flowchart TB
+    NET["Internet"] --> RE["Réseau — limiter ce qui est joignable"]
+    RE --> ID["Identités — vérifier qui parle"]
+    ID --> AP["Application — rejeter ce qui est malveillant"]
+    AP --> DA["Données — rendre illisible, permettre de revenir en arrière"]
+    DE["Détection — voir et réagir"] -.-> RE
+    DE -.-> ID
+    DE -.-> AP
+    DE -.-> DA
+```
+
 > 🧪 **Atelier rapide (5 min)**
 >
 > Prenez une application que vous connaissez — une boutique en ligne, un
@@ -79,6 +95,27 @@ requête est vérifiée, quelle que soit son origine**. Concrètement :
 - le cloisonnement découpe le système en zones où une compromission reste
   locale (voir l'exercice 1 de ce chapitre).
 
+Le double panneau ci-dessous montre l'inversion : à gauche, une seule frontière
+est vérifiée et tout ce qui passe dedans circule librement. À droite, chaque flux
+porte son propre contrôle.
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#eef2f9','primaryBorderColor':'#3b5b8d','primaryTextColor':'#1f3f6b','lineColor':'#3b5b8d','secondaryColor':'#dbe6f5','tertiaryColor':'#fde8e8','fontFamily':'DejaVu Sans'}}}%%
+flowchart LR
+    subgraph P["Modèle périmétrique — une seule frontière"]
+        direction LR
+        U["Utilisateurs"] --> G{"Frontière vérifiée"}
+        G --> A["Application"]
+        G --> B["Base de données"]
+        A -.->|à l'intérieur, plus rien n'est vérifié| B
+    end
+    subgraph Z["Modèle Zero Trust — chaque flux est vérifié"]
+        direction LR
+        U2["Utilisateurs"] -->|jeton, durée et périmètre limités| A2["Application"]
+        A2 -->|vérification continue| B2["Base de données"]
+    end
+```
+
 Exemple tiré d'une plateforme data : un worker d'orchestration (Airflow) qui
 accède à un stockage d'objet (MinIO) présente un jeton propre à sa tâche, valable
 le temps du traitement — même si les deux composants partagent le même réseau
@@ -89,6 +126,30 @@ chaque appel.
 > Zero Trust est une direction, pas un produit à installer. Le premier pas
 > tient en une question, posée à chaque flux : « si ce composant était
 > compromis, que pourrait-il faire de plus que ce dont il a besoin ? »
+
+Le schéma ci-dessous donne un exemplaire de cette carte. Il est posé sur
+**DIGICHEESE** (l'entreprise d'étude du parcours), un autre système
+que celui de l'exercice 1, pour que vous ayez
+le format et non la réponse : un flux se lit source, destination, contenu et
+sens, et chaque franchissement de frontière porte un contrôle.
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#eef2f9','primaryBorderColor':'#3b5b8d','primaryTextColor':'#1f3f6b','lineColor':'#3b5b8d','secondaryColor':'#dbe6f5','tertiaryColor':'#fde8e8','fontFamily':'DejaVu Sans'}}}%%
+flowchart LR
+    subgraph ZP["Zone publique — aucune confiance a priori"]
+        CLI["Clients"]
+    end
+    subgraph ZT["Zone de présentation — exposée, donc conçue pour être hostile"]
+        SITE["Site et API"]
+    end
+    subgraph ZD["Zone de données — la valeur à protéger"]
+        BASE["Base de commandes"]
+        SAV["Sauvegardes"]
+    end
+    CLI -->|commande, écriture — authentification| SITE
+    SITE -->|coordonnées clients, écriture — jeton à durée limitée| BASE
+    BASE -->|copie complète, lecture — chiffrement| SAV
+```
 
 ---
 
